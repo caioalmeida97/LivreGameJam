@@ -17,14 +17,12 @@ func _ready():
 	
 func on_area_enter(area):
 	if area.is_in_group("paredes") or area.get_parent().is_in_group("galinhas"): 
-		print("hello beautiful world")
 		direcao.x *= -1
 		direcao.z *= -1
-	elif area.is_in_group("personagem"):
-		print('DAMAGE DEALT TO PLAYER')
+	#elif area.is_in_group("personagem"):
 	elif area.get_parent().is_in_group("objetos"):
-		print("__________________________")
 		queue_free()
+		
 	pass
 	
 func follow(var fps):
@@ -44,9 +42,8 @@ func follow(var fps):
 		galinha_dir.z = -1
 	
 	var distancia_gtot = get_translation().distance_to(target)
-	print(distancia_gtot)
+
 	if (distancia_gtot < float (vel)):
-		print('DEU CERTO PORRA')
 		galinha_dir = Vector3(0,0,0)
 
 	set_translation(get_translation() + vel * galinha_dir * fps)
@@ -56,9 +53,7 @@ func searching(var fps):
 	#State searching
 	randomize()	
 	if (contador_searching % 200 == 0):
-		print(contador_searching)
 		random = int (rand_range(1, 8))
-		print(random)
 	
 	if random == 1:
 		direcao.x = 1
