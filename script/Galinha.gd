@@ -41,5 +41,6 @@ func _process(delta):
 		set_rotation(Vector3(0, deg2rad(225), 0))
 
 	set_translation(get_translation() + direcao * vel * delta)
+	print(get_translation())
 	contador += 1
 	pass
