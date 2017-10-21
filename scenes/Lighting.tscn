@@ -80,7 +80,7 @@ shadow/blur_passes = 1.0
 projector = null
 operator = 0
 shadow/mode = 0
-shadow/max_distance = 50.0
+shadow/max_distance = 55.0
 shadow/split_weight = 0.5
 shadow/zoffset_scale = 2.0
 
