@@ -22,7 +22,8 @@ func on_area_enter(area):
 		direcao.z *= -1
 	elif area.is_in_group("personagem"):
 		print('DAMAGE DEALT TO PLAYER')
-	elif area.is_in_group("objetos"):
+	elif area.get_parent().is_in_group("objetos"):
+		print("__________________________")
 		queue_free()
 	pass
 	
