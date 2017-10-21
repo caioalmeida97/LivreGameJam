@@ -1,8 +1,7 @@
 [gd_scene load_steps=3 format=1]
 
-[ext_resource path="res://scenes/Galinha.scn" type="PackedScene" id=1]
+[ext_resource path="res://meshes/Galinha.scn" type="PackedScene" id=1]
 [ext_resource path="res://script/Galinha.gd" type="Script" id=2]
-
 
 [node name="Galinha" type="Spatial"]
 
@@ -39,7 +38,7 @@ shadow/zoffset_scale = 2.0
 [node name="Camera" type="Camera" parent="DirectionalLight"]
 
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-transform/local = Transform( 0.999528, -0.0298789, 0.00752699, 0.0261161, 0.95115, 0.307629, -0.0163509, -0.307287, 0.951477, -2.12564, 4.11476, 5.22066 )
+transform/local = Transform( 0.999528, -0.0298789, 0.00752699, 0.0261161, 0.95115, 0.307629, -0.0163509, -0.307287, 0.951477, -2.19691, 5.96249, 10.5662 )
 projection = 0
 fov = 65.0
 near = 0.1

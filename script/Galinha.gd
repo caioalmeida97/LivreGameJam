@@ -1,17 +1,48 @@
 extends Spatial
 
 var direcao = Vector3(0,0,0)
-var vel = 5
+var target = Vector3(2, 0, 2)
+var galinha_dir = get_translation()
+var vel = 1
+var contador_searching = 0
+var contador_follow = 0
+var random = 0
+
 
 func _ready():
 	set_process(true)
 	pass
+	
+func follow(var fps):
+	galinha_dir = Vector3(0,0,0)
+	if target.x > galinha_dir.x:
+		galinha_dir.x = 1
+	
+	elif target.x < galinha_dir.x:
+		galinha_dir.x = -1
+	
+	if target.z > galinha_dir.z:
+		galinha_dir.z = 1
+		
+	elif target.z < galinha_dir.z:
+		galinha_dir.z = -1
+	
+	var distancia_gtot = get_translation().distance_to(target)
+	print(distancia_gtot)
+	if (distancia_gtot < float (0.1)):
+		print('DEU CERTO PORRA')
+		galinha_dir = Vector3(0,0,0)
+		
 
-var contador = 0
-var random = 0
-func _process(delta):
-	if (contador % 300 == 0):
-		print(contador)
+	set_translation(get_translation() + vel * galinha_dir * fps)
+	
+	contador_follow += 1
+	
+	pass
+	
+func searching(var fps):
+	if (contador_searching % 300 == 0):
+		print(contador_searching)
 		random = int (rand_range(1, 8))
 		print(random)
 	
@@ -40,7 +71,17 @@ func _process(delta):
 		direcao = Vector3(-1,0,-1)
 		set_rotation(Vector3(0, deg2rad(225), 0))
 
-	set_translation(get_translation() + direcao * vel * delta)
-	print(get_translation())
-	contador += 1
+	set_translation(get_translation() + direcao * vel * fps)
+	contador_searching += 1
+	pass
+	
+
+func _process(delta):
+	var searching = false
+	
+	if searching:
+		searching(delta)
+	else:
+		follow(delta)
+	
 	pass
