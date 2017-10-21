@@ -13,6 +13,7 @@
 
 [node name="Spatial" type="Spatial"]
 
+editor/display_folded = true
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="Paredes2" parent="." instance=ExtResource( 1 )]
