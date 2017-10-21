@@ -1,6 +1,6 @@
 extends Node
 
-var gameScene = "res://scenes/Main.tscn";
+var gameScene = "res://scenes/Lighting.tscn";
 var creditsPanel;
 var optionsMenu;
 var mainMenu;
