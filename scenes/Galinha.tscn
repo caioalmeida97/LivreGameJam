@@ -35,3 +35,4 @@ geometry/use_baked_light = false
 geometry/baked_light_tex_id = 0
 
 
+[editable path="Galinha/Particles"]

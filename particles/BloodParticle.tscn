@@ -53,6 +53,18 @@ tracks/0/keys = {
 "update": 1,
 "values": [ false, true, false ]
 }
+tracks/1/type = "method"
+tracks/1/path = NodePath("../../..")
+tracks/1/interp = 1
+tracks/1/imported = false
+tracks/1/keys = {
+"times": FloatArray( 1 ),
+"transitions": FloatArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "queue_free"
+} ]
+}
 
 [node name="Particles" type="Spatial"]
 
@@ -86,7 +98,7 @@ emission_points = Vector3Array(  )
 gravity_normal = Vector3( 0, -1, 0 )
 local_coords = true
 emit_timeout = 0.0
-vars/lifetime = 1.4
+vars/lifetime = 0.9
 vars/spread = 1.0
 vars/gravity = 10.0
 vars/linear_vel = 0.2
@@ -96,7 +108,7 @@ vars/radial_accel = 0.0
 vars/tan_accel = 0.0
 vars/damping = 0.0
 vars/initial_size = 0.16
-vars/final_size = 0.39
+vars/final_size = 0.0
 vars/initial_angle = 0.0
 vars/height_from_velocity = false
 vars/height = 1.0
