@@ -3,11 +3,10 @@ extends Spatial
 
 
 func _ready():
-	
+	set_process(true)
 	
 	pass
 	
-func on_body(body):
-
+func hit():
+	get_node("AnimationPlayer").play("DesentupidorAnim")
 	pass
-

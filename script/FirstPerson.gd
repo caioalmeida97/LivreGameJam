@@ -15,6 +15,9 @@ func _fixed_process(delta):
 		translate(Vector3(-speed, 0, 0))
 	if Input.is_key_pressed(KEY_D):
 		translate(Vector3(speed, 0, 0))
+	if Input.is_action_pressed("shoot"):
+		get_node("Spatial").hit()
+		
 
 func _input(event):
 	#Camera motion

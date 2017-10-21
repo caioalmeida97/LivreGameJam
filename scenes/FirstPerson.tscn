@@ -50,7 +50,7 @@ script/script = ExtResource( 2 )
 
 [node name="Spatial" parent="." instance=ExtResource( 3 )]
 
-transform/local = Transform( 0.958781, -0.0616822, -0.277371, 0.00681578, 0.980866, -0.194566, 0.284065, 0.184656, 0.940856, -0.659041, 0, 0 )
+transform/local = Transform( 0.684623, -0.0244528, -0.0992908, 0.004718, 0.678972, -0.134682, 0.102149, 0.132528, 0.67169, 0.860471, 0, -2.00734 )
 
 [node name="Camera" type="Camera" parent="."]
 
