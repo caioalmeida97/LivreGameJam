@@ -6,11 +6,24 @@ var galinha_dir = get_translation()
 var vel = 1
 var contador_searching = 0
 var random = 0
-var search_radius = 1
+var search_radius = 5
 
 
 func _ready():
 	set_process(true)
+	add_to_group("galinhas")
+	get_node("Area").connect("area_enter", self, "on_area_enter")
+	pass
+	
+func on_area_enter(area):
+	if area.is_in_group("paredes") or area.get_parent().is_in_group("galinhas"): 
+		print("hello beautiful world")
+		direcao.x *= -1
+		direcao.z *= -1
+	elif area.is_in_group("personagem"):
+		print('DAMAGE DEALT TO PLAYER')
+	elif area.is_in_group("objetos"):
+		queue_free()
 	pass
 	
 func follow(var fps):
