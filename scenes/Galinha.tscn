@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=1]
+[gd_scene load_steps=3 format=1]
 
 [ext_resource path="res://meshes/Galinha.scn" type="PackedScene" id=1]
+[ext_resource path="res://particles/BloodParticle.tscn" type="PackedScene" id=2]
 
 [node name="Galinha_teste" type="Spatial"]
 
@@ -9,6 +10,10 @@ _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 [node name="Galinha" parent="." instance=ExtResource( 1 )]
 
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.345555, 0 )
+
+[node name="Particles" parent="Galinha" instance=ExtResource( 2 )]
+
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.345555, -0.0497093 )
 
 [node name="TestCube" type="TestCube" parent="."]
 
