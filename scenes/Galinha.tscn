@@ -1,28 +1,16 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=3 format=1]
 
-[ext_resource path="res://Animation/Galinha.tres" type="Animation" id=1]
-[ext_resource path="res://meshes/Galinha.scn" type="PackedScene" id=2]
-[ext_resource path="res://script/Galinha.gd" type="Script" id=3]
+[ext_resource path="res://scenes/Galinha.scn" type="PackedScene" id=1]
+[ext_resource path="res://script/Galinha.gd" type="Script" id=2]
+
 
 [node name="Galinha" type="Spatial"]
 
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
-[node name="AnimaçãoGalinhaAnda" type="AnimationPlayer" parent="."]
+[node name="Galinha" parent="." instance=ExtResource( 1 )]
 
-playback/process_mode = 1
-playback/default_blend_time = 0.0
-root/root = NodePath("../Galinha")
-anims/GalinhaAnda = ExtResource( 1 )
-playback/active = true
-playback/speed = 1.0
-blend_times = [  ]
-autoplay = "GalinhaAnda"
-
-[node name="Galinha" parent="." instance=ExtResource( 2 )]
-
-transform/local = Transform( 0.987633, 0.156781, 0, -0.156781, 0.987633, 0, 0, 0, 1, 0, 0, 0 )
-script/script = ExtResource( 3 )
+script/script = ExtResource( 2 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 
@@ -51,9 +39,9 @@ shadow/zoffset_scale = 2.0
 [node name="Camera" type="Camera" parent="DirectionalLight"]
 
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-transform/local = Transform( 0.999528, -0.0298789, 0.00752698, 0.0261162, 0.95115, 0.307629, -0.0163509, -0.307287, 0.951477, -2.48428, 13.4127, 18.1565 )
+transform/local = Transform( 0.999528, -0.0298789, 0.00752699, 0.0261161, 0.95115, 0.307629, -0.0163509, -0.307287, 0.951477, -2.12564, 4.11476, 5.22066 )
 projection = 0
-fov = 90.0
+fov = 65.0
 near = 0.1
 far = 100.0
 keep_aspect = 1
