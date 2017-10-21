@@ -5,6 +5,7 @@ var creditsPanel;
 var optionsMenu;
 var mainMenu;
 var exitDialog;
+var menuAnim;
 
 func _ready():
 	# Called every time the node is added to the scene.
@@ -15,6 +16,8 @@ func _ready():
 	optionsMenu.hide();
 	creditsPanel = get_parent().get_node("Options_UI/MarginContainer/PopupPanel");
 	exitDialog = get_parent().get_node("ConfirmationDialog");
+	menuAnim = get_parent().get_node("AnimationPlayer");
+	menuAnim.play("MainMenu");
 	
 	set_process_input(true);
 	pass
