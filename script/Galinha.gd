@@ -21,7 +21,8 @@ func on_area_enter(area):
 		direcao.z *= -1
 	#elif area.is_in_group("personagem"):
 	elif area.get_parent().is_in_group("objetos"):
-		queue_free()
+		get_node("Particles/AnimationPlayer").play("BloodAnim")
+		#queue_free()
 		
 	pass
 	
