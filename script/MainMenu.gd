@@ -1,19 +1,43 @@
 extends Node
 
-# class member variables go here, for example:
-# var a = 2
-# var b = "textvar"
+var gameScene = "res://scenes/Main.tscn";
+var creditsPanel;
+var optionsMenu;
+var mainMenu;
+var exitDialog;
 
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
+	mainMenu = self.get_node(".");
+	mainMenu.show();
+	optionsMenu = get_parent().get_node("Options_UI");
+	optionsMenu.hide();
+	creditsPanel = get_parent().get_node("Options_UI/MarginContainer/PopupPanel");
+	exitDialog = get_parent().get_node("ConfirmationDialog");
+	
+	set_process_input(true);
 	pass
+
+func _input(event):
+	if Input.is_action_pressed("ui_cancel"):
+		if not creditsPanel.is_hidden():
+			creditsPanel.hide();
+		elif optionsMenu.is_visible():
+			optionsMenu.hide();
+			mainMenu.show();
+		elif mainMenu.is_visible():
+			exitDialog.show();
+			## BUG!!!
+			if exitDialog.get_ok():
+				print ("Teste")
+
 
 ## Main Menu
 func _on_PlayButton_pressed():
 	print ("Starting game!");
 	# Starts the game.
-	get_tree().change_scene("res://scenes/Main.tscn");
+	get_tree().change_scene(gameScene);
 
 
 func _on_OptionsButton_pressed():
@@ -21,7 +45,7 @@ func _on_OptionsButton_pressed():
 	# Hides the current Main Menu.
 	self.hide();
 	# Moves to the parent object and enables the "Options" UI.
-	get_parent().get_node("Options_UI").show();
+	optionsMenu.show();
 	
 
 
@@ -34,7 +58,7 @@ func _on_ExitButton_pressed():
 ## Options Menu
 func _on_ReturnButton_pressed():
 	# Moves to the parent object and disables the "Options" UI.
-	get_parent().get_node("Options_UI").hide();
+	optionsMenu.hide();
 	# Reenable MainMenu UI.
 	self.show();
 #   AudioServer.set_fx_global_volume_scale(sound_volume*sound)
@@ -51,3 +75,11 @@ func _on_WindowedMode_toggled( pressed ):
 	## BUG!!!
 	if (!OS.is_window_fullscreen()):
 		OS.set_borderless_window(pressed);
+
+
+func _on_CreditsButton_pressed():
+	creditsPanel.show();
+
+
+func _on_CreditsBackButton_pressed():
+	creditsPanel.hide();

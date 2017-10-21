@@ -210,6 +210,7 @@ margin/bottom = 520.0
 
 [node name="Options_UI" type="Control" parent="."]
 
+editor/display_folded = true
 anchor/right = 1
 anchor/bottom = 1
 rect/min_size = Vector2( 1024, 600 )
@@ -239,6 +240,141 @@ custom_constants/margin_top = 0
 custom_constants/margin_left = 0
 custom_constants/margin_bottom = 0
 
+[node name="PopupPanel" type="PopupPanel" parent="Options_UI/MarginContainer"]
+
+editor/display_folded = true
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 1024.0
+margin/bottom = 600.0
+popup/exclusive = false
+
+[node name="MarginContainer" type="MarginContainer" parent="Options_UI/MarginContainer/PopupPanel"]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 0.0
+custom_constants/margin_right = 50
+custom_constants/margin_top = 30
+custom_constants/margin_left = 50
+custom_constants/margin_bottom = 30
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Options_UI/MarginContainer/PopupPanel/MarginContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 50.0
+margin/top = 30.0
+margin/right = 974.0
+margin/bottom = 570.0
+alignment = 0
+
+[node name="Right Space1" type="Control" parent="Options_UI/MarginContainer/PopupPanel/MarginContainer/HBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 305.0
+margin/bottom = 540.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Options_UI/MarginContainer/PopupPanel/MarginContainer/HBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 309.0
+margin/top = 0.0
+margin/right = 614.0
+margin/bottom = 540.0
+alignment = 0
+
+[node name="Label" type="Label" parent="Options_UI/MarginContainer/PopupPanel/MarginContainer/HBoxContainer/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 0
+size_flags/vertical = 0
+margin/left = 130.0
+margin/top = 0.0
+margin/right = 175.0
+margin/bottom = 14.0
+text = "Credits"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Options_UI/MarginContainer/PopupPanel/MarginContainer/HBoxContainer/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 0.0
+margin/top = 18.0
+margin/right = 305.0
+margin/bottom = 516.0
+custom_constants/line_separation = 10
+bbcode/enabled = false
+bbcode/bbcode = "Developed by:
+André
+Caio
+Daniel
+Michael
+Rodrigo
+Tacio
+Vinícius
+
+Livre Game Jam - Campinas
+2017"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="Button" type="Button" parent="Options_UI/MarginContainer/PopupPanel/MarginContainer/HBoxContainer/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 0
+size_flags/vertical = 2
+margin/left = 131.0
+margin/top = 520.0
+margin/right = 173.0
+margin/bottom = 540.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Back"
+flat = false
+
+[node name="Right Space2" type="Control" parent="Options_UI/MarginContainer/PopupPanel/MarginContainer/HBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 618.0
+margin/top = 0.0
+margin/right = 924.0
+margin/bottom = 540.0
+
 [node name="HBoxContainer" type="HBoxContainer" parent="Options_UI/MarginContainer"]
 
 focus/ignore_mouse = false
@@ -263,7 +399,7 @@ margin/top = 0.0
 margin/right = 50.0
 margin/bottom = 600.0
 
-[node name="CenterContainer" type="CenterContainer" parent="Options_UI/MarginContainer/HBoxContainer"]
+[node name="Right Space" type="Control" parent="Options_UI/MarginContainer/HBoxContainer"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -272,6 +408,17 @@ size_flags/vertical = 3
 margin/left = 54.0
 margin/top = 0.0
 margin/right = 537.0
+margin/bottom = 600.0
+
+[node name="CenterContainer" type="CenterContainer" parent="Options_UI/MarginContainer/HBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 541.0
+margin/top = 0.0
+margin/right = 1024.0
 margin/bottom = 600.0
 use_top_left = false
 
@@ -283,9 +430,9 @@ focus/stop_mouse = false
 size_flags/horizontal = 3
 size_flags/vertical = 3
 margin/left = 141.0
-margin/top = 100.0
+margin/top = 71.0
 margin/right = 341.0
-margin/bottom = 500.0
+margin/bottom = 529.0
 alignment = 0
 
 [node name="Label" type="Label" parent="Options_UI/MarginContainer/HBoxContainer/CenterContainer/VBoxContainer"]
@@ -325,7 +472,7 @@ size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 122.0
 margin/right = 200.0
-margin/bottom = 400.0
+margin/bottom = 458.0
 alignment = 0
 
 [node name="Play" type="Button" parent="Options_UI/MarginContainer/HBoxContainer/CenterContainer/VBoxContainer/VBoxContainer"]
@@ -548,7 +695,7 @@ margin/top = 224.0
 margin/right = 200.0
 margin/bottom = 254.0
 
-[node name="BT_Return" type="Button" parent="Options_UI/MarginContainer/HBoxContainer/CenterContainer/VBoxContainer/VBoxContainer"]
+[node name="BT_Credits" type="Button" parent="Options_UI/MarginContainer/HBoxContainer/CenterContainer/VBoxContainer/VBoxContainer"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -561,19 +708,56 @@ margin/bottom = 278.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
-text = "Back"
+text = "Credits"
 flat = false
 
-[node name="Right Space" type="Control" parent="Options_UI/MarginContainer/HBoxContainer"]
+[node name="Space5" type="Control" parent="Options_UI/MarginContainer/HBoxContainer/CenterContainer/VBoxContainer/VBoxContainer"]
+
+rect/min_size = Vector2( 0, 30 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 282.0
+margin/right = 200.0
+margin/bottom = 312.0
+
+[node name="BT_Return" type="Button" parent="Options_UI/MarginContainer/HBoxContainer/CenterContainer/VBoxContainer/VBoxContainer"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
-size_flags/horizontal = 3
-size_flags/vertical = 3
-margin/left = 541.0
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 316.0
+margin/right = 200.0
+margin/bottom = 336.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Back"
+flat = false
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]
+
+visibility/visible = false
+anchor/left = 3
+anchor/top = 3
+anchor/right = 3
+anchor/bottom = 3
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 105.0
 margin/top = 0.0
-margin/right = 1024.0
-margin/bottom = 600.0
+margin/right = -105.0
+margin/bottom = -58.0
+popup/exclusive = false
+window/title = "Are you sure?"
+dialog/text = "Do you want to exit the game?"
+dialog/hide_on_ok = false
 
 [connection signal="pressed" from="MainMenu_UI/MarginContainer/HBoxContainer/CenterContainer/VBoxContainer/VBoxContainer/BT_Play" to="MainMenu_UI" method="_on_PlayButton_pressed"]
 
@@ -581,9 +765,13 @@ margin/bottom = 600.0
 
 [connection signal="pressed" from="MainMenu_UI/MarginContainer/HBoxContainer/CenterContainer/VBoxContainer/VBoxContainer/BT_Exit" to="MainMenu_UI" method="_on_ExitButton_pressed"]
 
+[connection signal="pressed" from="Options_UI/MarginContainer/PopupPanel/MarginContainer/HBoxContainer/VBoxContainer/Button" to="MainMenu_UI" method="_on_CreditsBackButton_pressed"]
+
 [connection signal="toggled" from="Options_UI/MarginContainer/HBoxContainer/CenterContainer/VBoxContainer/VBoxContainer/HBoxContainer1/CheckBox" to="MainMenu_UI" method="_on_FullScreenCheckbox_toggled"]
 
 [connection signal="toggled" from="Options_UI/MarginContainer/HBoxContainer/CenterContainer/VBoxContainer/VBoxContainer/HBoxContainer2/CheckBox" to="MainMenu_UI" method="_on_WindowedMode_toggled"]
+
+[connection signal="pressed" from="Options_UI/MarginContainer/HBoxContainer/CenterContainer/VBoxContainer/VBoxContainer/BT_Credits" to="MainMenu_UI" method="_on_CreditsButton_pressed"]
 
 [connection signal="pressed" from="Options_UI/MarginContainer/HBoxContainer/CenterContainer/VBoxContainer/VBoxContainer/BT_Return" to="MainMenu_UI" method="_on_ReturnButton_pressed"]
 
