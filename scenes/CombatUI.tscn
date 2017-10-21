@@ -23,7 +23,7 @@ tracks/0/keys = {
 [node name="Spatial" type="Spatial"]
 
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-transform/local = Transform( 0.39171, 0.526861, 0.754308, -0.67065, 0.72476, -0.157956, -0.629913, -0.444004, 0.637236, 0, 0, 0 )
+transform/local = Transform( 0.719609, 0.670373, 0.181004, -0.673654, 0.737206, -0.0521234, -0.168379, -0.0844259, 0.9821, 0, 0, 0 )
 
 [node name="Toco" parent="." instance=ExtResource( 1 )]
 
