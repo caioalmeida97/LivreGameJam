@@ -28,9 +28,7 @@ func _input(event):
 			mainMenu.show();
 		elif mainMenu.is_visible():
 			exitDialog.show();
-			# Bug...
-			if exitDialog.get_ok():
-				print ("Teste")
+			
 
 
 ## Main Menu
