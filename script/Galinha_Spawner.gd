@@ -8,15 +8,14 @@ func _ready():
 	set_process(true)
 	pass
 	
-func _process(delta):
+
 	
-	if cont < 5 :
+func spawn(vector, g):
+	if cont < g :
 		var galinha = pre_galinha.instance()
-		
-		
-		galinha.set_translation(Vector3(3,0,9))
+		galinha.set_translation(vector)
 		get_owner().add_child(galinha)
 		cont += 1
-	
+		
 		
 	pass
