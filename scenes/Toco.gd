@@ -10,9 +10,3 @@ func _ready():
 	
 	pass
 	
-func on_body(body):
-	print("toco")
-	if body.get_parent().is_in_group("galinhas"):
-		print("tocu galinha")
-		
-	pass
