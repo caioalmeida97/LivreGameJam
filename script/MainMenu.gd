@@ -17,7 +17,7 @@ func _ready():
 	creditsPanel = get_parent().get_node("Options_UI/MarginContainer/PopupPanel");
 	exitDialog = get_parent().get_node("ConfirmationDialog");
 	menuAnim = get_parent().get_node("AnimationPlayer");
-	menuAnim.play("MainMenu");
+	#menuAnim.play("MainMenu");
 	
 	set_process_input(true);
 	pass
