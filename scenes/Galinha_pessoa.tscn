@@ -3,7 +3,7 @@
 [ext_resource path="res://meshes/Galinha.scn" type="PackedScene" id=1]
 [ext_resource path="res://script/Galinha_pessoa.gd" type="Script" id=2]
 
-[node name="Galinha_pessoa" type="Spatial"]
+[node name="Teste_galinha" type="Spatial"]
 
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 

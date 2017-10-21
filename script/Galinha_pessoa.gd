@@ -1,11 +1,9 @@
 extends Spatial
 
-
-
 var target = Vector3(5,0,3)
-var galinha = get_translation()
+var galinha = Vector3(0,0,0)
 
-var vel = 10
+var veloc = 10
 
 func _ready():
 	set_process(true)
@@ -14,13 +12,14 @@ func _ready():
 
 var contador = 0
 func _process(delta):
-	print(get_translation())
-	print(galinha)
-	if target.x > galinha.x:
-		galinha = Vector3(1, 0, 0)
-		
-	elif target.x < galinha.x:
+	galinha = Vector3(0,0,0)
+	#print(get_translation())
+	
+	if galinha.x > target.x:
 		galinha.x = -1
+	
+	elif galinha.x < target.x:
+		galinha.x = 1
 	
 	if target.z > galinha.z:
 		galinha.z = 1
@@ -28,11 +27,18 @@ func _process(delta):
 	elif target.z < galinha.z:
 		galinha.z = -1
 	
-	if galinha.x == target.x && galinha.z == target.z:
+	if galinha.x == target.x and galinha.z == target.z:
 		galinha.y = 1
 
-	galinha = set_translation(get_translation() + vel * galinha * delta)
+	print('PRINTANDO GET TRANSLATION + ...')
+	print(get_translation() + veloc * galinha * delta)
+	set_translation(get_translation() + veloc * galinha * delta)
+	
+	print('PRINTANDO GALINHA')
+	print(galinha)
+	print('PRINTANDO GET TRANSLATION')
+	print(get_translation())
 
 	
-	 
+	contador += 1
 	pass
