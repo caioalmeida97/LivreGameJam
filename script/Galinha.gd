@@ -1,12 +1,12 @@
 extends Spatial
 
 var direcao = Vector3(0,0,0)
-var target = Vector3(2, 0, 2)
+var target = Vector3(3, 0, 2)
 var galinha_dir = get_translation()
 var vel = 1
 var contador_searching = 0
-var contador_follow = 0
 var random = 0
+var search_radius = 1
 
 
 func _ready():
@@ -14,6 +14,8 @@ func _ready():
 	pass
 	
 func follow(var fps):
+	
+	#State follow
 	galinha_dir = Vector3(0,0,0)
 	if target.x > galinha_dir.x:
 		galinha_dir.x = 1
@@ -29,19 +31,17 @@ func follow(var fps):
 	
 	var distancia_gtot = get_translation().distance_to(target)
 	print(distancia_gtot)
-	if (distancia_gtot < float (0.1)):
+	if (distancia_gtot < float (vel)):
 		print('DEU CERTO PORRA')
 		galinha_dir = Vector3(0,0,0)
-		
 
 	set_translation(get_translation() + vel * galinha_dir * fps)
-	
-	contador_follow += 1
-	
 	pass
 	
 func searching(var fps):
-	if (contador_searching % 300 == 0):
+	#State searching
+	randomize()	
+	if (contador_searching % 200 == 0):
 		print(contador_searching)
 		random = int (rand_range(1, 8))
 		print(random)
@@ -77,8 +77,11 @@ func searching(var fps):
 	
 
 func _process(delta):
-	var searching = false
-	
+	var searching
+	if get_translation().distance_to(target) > search_radius:
+		searching = true
+	else:
+		searching = false
 	if searching:
 		searching(delta)
 	else:
