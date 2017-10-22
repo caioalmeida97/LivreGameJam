@@ -35,9 +35,17 @@ transform/local = Transform( 8.14757e-08, 7.12284e-15, -1.86395, 0, 1.86395, 7.1
 
 transform/local = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 24.9864, 13.1915, 3.12629 )
 
+[node name="Respirador4" parent="." instance=ExtResource( 2 )]
+
+transform/local = Transform( -1.49983, 0, -0.0223854, 0, 1.5, 0, 0.0223854, 0, -1.49983, 23.9498, 13.1915, -4.36446 )
+
 [node name="Respirador1" parent="." instance=ExtResource( 2 )]
 
 transform/local = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 24.9864, 13.1915, -4.07118 )
+
+[node name="Respirador4 2" parent="." instance=ExtResource( 2 )]
+
+transform/local = Transform( -1.49983, 0, -0.0223854, 0, 1.5, 0, 0.0223854, 0, -1.49983, 24.0572, 13.1915, 2.8322 )
 
 [node name="Respirador2" parent="." instance=ExtResource( 2 )]
 
