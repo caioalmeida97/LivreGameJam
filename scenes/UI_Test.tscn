@@ -49,7 +49,6 @@ stretch_mode = 0
 
 [node name="TextureFrame" type="TextureFrame" parent="."]
 
-visibility/visible = false
 anchor/right = 1
 anchor/bottom = 1
 rect/scale = Vector2( 0.65, 0.65 )
@@ -66,7 +65,6 @@ stretch_mode = 0
 
 [node name="ColorFrame" type="ColorFrame" parent="."]
 
-visibility/visible = false
 anchor/right = 1
 anchor/bottom = 1
 focus/ignore_mouse = false
@@ -142,9 +140,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 3
 size_flags/vertical = 3
-margin/left = 175.0
+margin/left = 174.0
 margin/top = 156.0
-margin/right = 255.0
+margin/right = 256.0
 margin/bottom = 364.0
 alignment = 0
 
@@ -156,9 +154,9 @@ size_flags/horizontal = 2
 size_flags/vertical = 0
 margin/left = 0.0
 margin/top = 0.0
-margin/right = 80.0
+margin/right = 82.0
 margin/bottom = 14.0
-text = "Game Name"
+text = "Chicken Club"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
@@ -172,7 +170,7 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 18.0
-margin/right = 80.0
+margin/right = 82.0
 margin/bottom = 68.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MainMenu_UI/MarginContainer/HBoxContainer/CenterContainer/VBoxContainer"]
@@ -183,7 +181,7 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 72.0
-margin/right = 80.0
+margin/right = 82.0
 margin/bottom = 208.0
 alignment = 0
 
@@ -195,7 +193,7 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 0.0
-margin/right = 80.0
+margin/right = 82.0
 margin/bottom = 20.0
 toggle_mode = false
 enabled_focus_mode = 2
@@ -212,7 +210,7 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 24.0
-margin/right = 80.0
+margin/right = 82.0
 margin/bottom = 54.0
 
 [node name="BT_Options" type="Button" parent="MainMenu_UI/MarginContainer/HBoxContainer/CenterContainer/VBoxContainer/VBoxContainer"]
@@ -223,7 +221,7 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 58.0
-margin/right = 80.0
+margin/right = 82.0
 margin/bottom = 78.0
 toggle_mode = false
 enabled_focus_mode = 2
@@ -240,7 +238,7 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 82.0
-margin/right = 80.0
+margin/right = 82.0
 margin/bottom = 112.0
 
 [node name="BT_Exit" type="Button" parent="MainMenu_UI/MarginContainer/HBoxContainer/CenterContainer/VBoxContainer/VBoxContainer"]
@@ -251,7 +249,7 @@ size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 116.0
-margin/right = 80.0
+margin/right = 82.0
 margin/bottom = 136.0
 toggle_mode = false
 enabled_focus_mode = 2
@@ -272,6 +270,8 @@ margin/bottom = 520.0
 
 [node name="Options_UI" type="Control" parent="."]
 
+editor/display_folded = true
+visibility/visible = false
 anchor/right = 1
 anchor/bottom = 1
 rect/min_size = Vector2( 1024, 600 )
@@ -301,166 +301,6 @@ custom_constants/margin_top = 40
 custom_constants/margin_left = 80
 custom_constants/margin_bottom = 40
 
-[node name="PopupPanel" type="PopupPanel" parent="Options_UI/MarginContainer"]
-
-visibility/visible = false
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 80.0
-margin/top = 40.0
-margin/right = 944.0
-margin/bottom = 560.0
-popup/exclusive = false
-
-[node name="MarginContainer" type="MarginContainer" parent="Options_UI/MarginContainer/PopupPanel"]
-
-anchor/right = 1
-anchor/bottom = 1
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 0.0
-margin/bottom = 0.0
-custom_constants/margin_right = 50
-custom_constants/margin_top = 30
-custom_constants/margin_left = 50
-custom_constants/margin_bottom = 30
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Options_UI/MarginContainer/PopupPanel/MarginContainer"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 50.0
-margin/top = 30.0
-margin/right = 814.0
-margin/bottom = 490.0
-alignment = 0
-
-[node name="RichTextLabel1" type="RichTextLabel" parent="Options_UI/MarginContainer/PopupPanel/MarginContainer/HBoxContainer"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 3
-size_flags/vertical = 3
-size_flags/stretch_ratio = 2.0
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 166.0
-margin/bottom = 460.0
-custom_constants/line_separation = 10
-bbcode/enabled = false
-bbcode/bbcode = "Créditos
-																		
-MÚSICA
-pauliuw			
-Emma_MA		
-												
-EFEITOS SONOROS
-remaxim
-esperar	
-SlykMrByches	
-artisticdude
-
-Livre Game Jam  -  Campinas 2017
-"
-visible_characters = -1
-percent_visible = 1.0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Options_UI/MarginContainer/PopupPanel/MarginContainer/HBoxContainer"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = false
-size_flags/horizontal = 3
-size_flags/vertical = 3
-margin/left = 170.0
-margin/top = 0.0
-margin/right = 253.0
-margin/bottom = 460.0
-alignment = 0
-
-[node name="Button" type="Button" parent="Options_UI/MarginContainer/PopupPanel/MarginContainer/HBoxContainer/VBoxContainer"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 0
-size_flags/vertical = 2
-margin/left = 20.0
-margin/top = 400.0
-margin/right = 62.0
-margin/bottom = 420.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-text = "Back"
-flat = false
-
-[node name="Right Space1" type="Control" parent="Options_UI/MarginContainer/PopupPanel/MarginContainer/HBoxContainer"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 3
-size_flags/vertical = 3
-margin/left = 257.0
-margin/top = 0.0
-margin/right = 340.0
-margin/bottom = 460.0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Options_UI/MarginContainer/PopupPanel/MarginContainer/HBoxContainer"]
-
-rect/min_size = Vector2( 100, 100 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 3
-size_flags/vertical = 3
-size_flags/stretch_ratio = 4.0
-margin/left = 344.0
-margin/top = 0.0
-margin/right = 676.0
-margin/bottom = 460.0
-custom_constants/line_separation = 10
-bbcode/enabled = false
-bbcode/bbcode = "CHICKEN VIRAL: THE GAME
-
-Desenvolvido por Nome do Time		
-									
-DESIGN E MODELAGEM 
-Rodrigo Disseli			
-Daniel Quevedo		
-												
-PROGRAMAÇÃO
-André Dobberman	
-Daniel Quevedo		
-Caio Almeida				
-Michael Vivaldini	
-Tácio Barreto
-Vinícius Rojas
-							
-MÚSICA TEMA
-Felipe Strozi
-
-Livre Game Jam  -  Campinas 2017
-"
-visible_characters = -1
-percent_visible = 1.0
-
-[node name="Right Space2" type="Control" parent="Options_UI/MarginContainer/PopupPanel/MarginContainer/HBoxContainer"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 3
-size_flags/vertical = 3
-margin/left = 680.0
-margin/top = 0.0
-margin/right = 764.0
-margin/bottom = 460.0
-
 [node name="HBoxContainer" type="HBoxContainer" parent="Options_UI/MarginContainer"]
 
 focus/ignore_mouse = false
@@ -487,16 +327,15 @@ use_top_left = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Options_UI/MarginContainer/HBoxContainer/CenterContainer"]
 
-editor/display_folded = true
 rect/min_size = Vector2( 200, 0 )
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 3
 size_flags/vertical = 3
 margin/left = 332.0
-margin/top = 73.0
+margin/top = 102.0
 margin/right = 532.0
-margin/bottom = 446.0
+margin/bottom = 417.0
 alignment = 0
 
 [node name="Label" type="Label" parent="Options_UI/MarginContainer/HBoxContainer/CenterContainer/VBoxContainer"]
@@ -539,34 +378,6 @@ margin/right = 200.0
 margin/bottom = 373.0
 alignment = 0
 
-[node name="Options" type="Button" parent="Options_UI/MarginContainer/HBoxContainer/CenterContainer/VBoxContainer/VBoxContainer"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 200.0
-margin/bottom = 20.0
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-text = "Options"
-flat = false
-
-[node name="Space 2" type="Control" parent="Options_UI/MarginContainer/HBoxContainer/CenterContainer/VBoxContainer/VBoxContainer"]
-
-rect/min_size = Vector2( 0, 30 )
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 24.0
-margin/right = 200.0
-margin/bottom = 54.0
-
 [node name="HBoxContainer" type="HBoxContainer" parent="Options_UI/MarginContainer/HBoxContainer/CenterContainer/VBoxContainer/VBoxContainer"]
 
 focus/ignore_mouse = false
@@ -574,9 +385,9 @@ focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 58.0
+margin/top = 0.0
 margin/right = 200.0
-margin/bottom = 74.0
+margin/bottom = 16.0
 custom_constants/separation = 20
 alignment = 0
 
@@ -625,9 +436,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 78.0
+margin/top = 20.0
 margin/right = 200.0
-margin/bottom = 108.0
+margin/bottom = 50.0
 
 [node name="HBoxContainer1" type="HBoxContainer" parent="Options_UI/MarginContainer/HBoxContainer/CenterContainer/VBoxContainer/VBoxContainer"]
 
@@ -636,9 +447,9 @@ focus/stop_mouse = false
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 112.0
+margin/top = 54.0
 margin/right = 200.0
-margin/bottom = 135.0
+margin/bottom = 77.0
 custom_constants/separation = 20
 alignment = 0
 
@@ -668,6 +479,7 @@ margin/left = 86.0
 margin/top = 0.0
 margin/right = 112.0
 margin/bottom = 23.0
+disabled = true
 toggle_mode = true
 enabled_focus_mode = 2
 shortcut = null
@@ -682,9 +494,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 139.0
+margin/top = 81.0
 margin/right = 200.0
-margin/bottom = 169.0
+margin/bottom = 111.0
 
 [node name="BT_Credits" type="Button" parent="Options_UI/MarginContainer/HBoxContainer/CenterContainer/VBoxContainer/VBoxContainer"]
 
@@ -693,9 +505,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 173.0
+margin/top = 115.0
 margin/right = 200.0
-margin/bottom = 193.0
+margin/bottom = 135.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -710,9 +522,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 197.0
+margin/top = 139.0
 margin/right = 200.0
-margin/bottom = 227.0
+margin/bottom = 169.0
 
 [node name="BT_Return" type="Button" parent="Options_UI/MarginContainer/HBoxContainer/CenterContainer/VBoxContainer/VBoxContainer"]
 
@@ -721,34 +533,197 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
-margin/top = 231.0
+margin/top = 173.0
 margin/right = 200.0
-margin/bottom = 251.0
+margin/bottom = 193.0
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 text = "Back"
 flat = false
 
-[node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]
+[node name="PopupPanel" type="PopupPanel" parent="Options_UI"]
 
 visibility/visible = false
-anchor/left = 3
-anchor/top = 3
-anchor/right = 3
-anchor/bottom = 3
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 0.0
+popup/exclusive = false
+
+[node name="MarginContainer" type="MarginContainer" parent="Options_UI/PopupPanel"]
+
+anchor/right = 1
+anchor/bottom = 1
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 105.0
+margin/left = 0.0
 margin/top = 0.0
-margin/right = -105.0
-margin/bottom = -58.0
-popup/exclusive = false
-window/title = "Are you sure?"
-dialog/text = "Do you want to exit the game?"
-dialog/hide_on_ok = false
+margin/right = 0.0
+margin/bottom = 0.0
+custom_constants/margin_right = 100
+custom_constants/margin_top = 50
+custom_constants/margin_left = 100
+custom_constants/margin_bottom = 50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Options_UI/PopupPanel/MarginContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 100.0
+margin/top = 50.0
+margin/right = 924.0
+margin/bottom = 550.0
+alignment = 0
+
+[node name="VBoxContainer 2" type="VBoxContainer" parent="Options_UI/PopupPanel/MarginContainer/HBoxContainer"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 250.0
+margin/bottom = 500.0
+alignment = 0
+
+[node name="Control" type="Control" parent="Options_UI/PopupPanel/MarginContainer/HBoxContainer/VBoxContainer 2"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 3
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 250.0
+margin/bottom = 165.0
+
+[node name="RichTextLabel1" type="RichTextLabel" parent="Options_UI/PopupPanel/MarginContainer/HBoxContainer/VBoxContainer 2"]
+
+rect/min_size = Vector2( 250, 280 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 3
+size_flags/stretch_ratio = 2.0
+margin/left = 0.0
+margin/top = 169.0
+margin/right = 250.0
+margin/bottom = 500.0
+custom_constants/line_separation = 10
+bbcode/enabled = false
+bbcode/bbcode = "MÚSICA
+pauliuw			
+Emma_MA		
+												
+EFEITOS SONOROS
+remaxim
+esperar	
+SlykMrByches	
+artisticdude
+"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Options_UI/PopupPanel/MarginContainer/HBoxContainer"]
+
+rect/min_size = Vector2( 100, 100 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 3
+size_flags/stretch_ratio = 2.0
+margin/left = 254.0
+margin/top = 0.0
+margin/right = 631.0
+margin/bottom = 500.0
+custom_constants/line_separation = 10
+bbcode/enabled = false
+bbcode/bbcode = "CHICKEN CLUB
+
+Desenvolvido por Go.Vector3
+									
+DESIGN E MODELAGEM 
+Rodrigo Disseli			
+Daniel Quevedo		
+												
+PROGRAMAÇÃO
+André Dobberman	
+Daniel Quevedo		
+Caio Almeida				
+Michael Vivaldini	
+Tácio Barreto
+Vinícius Rojas
+							
+MÚSICA TEMA
+Felipe Strozi
+
+Livre Game Jam  -  Campinas 2017"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Options_UI/PopupPanel/MarginContainer/HBoxContainer"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 635.0
+margin/top = 0.0
+margin/right = 824.0
+margin/bottom = 500.0
+alignment = 0
+
+[node name="Control" type="Control" parent="Options_UI/PopupPanel/MarginContainer/HBoxContainer/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 189.0
+margin/bottom = 236.0
+
+[node name="Button" type="Button" parent="Options_UI/PopupPanel/MarginContainer/HBoxContainer/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 0
+size_flags/vertical = 2
+margin/left = 73.0
+margin/top = 240.0
+margin/right = 115.0
+margin/bottom = 260.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Back"
+flat = false
+
+[node name="Control1" type="Control" parent="Options_UI/PopupPanel/MarginContainer/HBoxContainer/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 0.0
+margin/top = 264.0
+margin/right = 189.0
+margin/bottom = 500.0
 
 [node name="SamplePlayer" type="SamplePlayer" parent="."]
 
@@ -775,8 +750,6 @@ script/script = ExtResource( 6 )
 
 [connection signal="pressed" from="MainMenu_UI/MarginContainer/HBoxContainer/CenterContainer/VBoxContainer/VBoxContainer/BT_Exit" to="MainMenu_UI" method="_on_ExitButton_pressed"]
 
-[connection signal="pressed" from="Options_UI/MarginContainer/PopupPanel/MarginContainer/HBoxContainer/VBoxContainer/Button" to="MainMenu_UI" method="_on_CreditsBackButton_pressed"]
-
 [connection signal="value_changed" from="Options_UI/MarginContainer/HBoxContainer/CenterContainer/VBoxContainer/VBoxContainer/HBoxContainer/HSlider" to="SamplePlayer" method="_on_VolumeSlider_value_changed"]
 
 [connection signal="toggled" from="Options_UI/MarginContainer/HBoxContainer/CenterContainer/VBoxContainer/VBoxContainer/HBoxContainer1/CheckBox" to="MainMenu_UI" method="_on_FullScreenCheckbox_toggled"]
@@ -784,5 +757,7 @@ script/script = ExtResource( 6 )
 [connection signal="pressed" from="Options_UI/MarginContainer/HBoxContainer/CenterContainer/VBoxContainer/VBoxContainer/BT_Credits" to="MainMenu_UI" method="_on_CreditsButton_pressed"]
 
 [connection signal="pressed" from="Options_UI/MarginContainer/HBoxContainer/CenterContainer/VBoxContainer/VBoxContainer/BT_Return" to="MainMenu_UI" method="_on_ReturnButton_pressed"]
+
+[connection signal="pressed" from="Options_UI/PopupPanel/MarginContainer/HBoxContainer/VBoxContainer/Button" to="MainMenu_UI" method="_on_CreditsBackButton_pressed"]
 
 

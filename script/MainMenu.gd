@@ -4,7 +4,6 @@ var gameScene = "res://scenes/Lighting.tscn";
 var creditsPanel;
 var optionsMenu;
 var mainMenu;
-var exitDialog;
 var menuAnim;
 var menuAnimation = "main_menu";
 
@@ -15,13 +14,13 @@ func _ready():
 	mainMenu.show();
 	optionsMenu = get_parent().get_node("Options_UI");
 	optionsMenu.hide();
-	creditsPanel = get_parent().get_node("Options_UI/MarginContainer/PopupPanel");
-	exitDialog = get_parent().get_node("ConfirmationDialog");
+	creditsPanel = get_parent().get_node("Options_UI/PopupPanel");
 	menuAnim = get_parent().get_node("AnimationPlayer");
 	menuAnim.play(menuAnimation);
 	
 	set_process_input(true);
 	pass
+
 
 func _input(event):
 	if Input.is_action_pressed("ui_cancel"):
@@ -30,9 +29,6 @@ func _input(event):
 		elif optionsMenu.is_visible():
 			optionsMenu.hide();
 			mainMenu.show();
-		elif mainMenu.is_visible():
-			exitDialog.show();
-			
 
 
 ## Main Menu
@@ -48,7 +44,6 @@ func _on_OptionsButton_pressed():
 	self.hide();
 	# Moves to the parent object and enables the "Options" UI.
 	optionsMenu.show();
-	
 
 
 func _on_ExitButton_pressed():
@@ -71,12 +66,6 @@ func _on_FullScreenCheckbox_toggled( pressed ):
 	# Sets fullscreen mode.
 	OS.set_window_fullscreen(pressed);
 	#OS.set_window_size(OS.get_screen_size(0))
-
-
-func _on_WindowedMode_toggled( pressed ):
-	## BUG!!!
-	if (!OS.is_window_fullscreen()):
-		OS.set_borderless_window(pressed);
 
 
 func _on_CreditsButton_pressed():
