@@ -13,7 +13,7 @@ height = 5.19078
 
 [sub_resource type="Animation" id=2]
 
-length = 1.0
+length = 0.6
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -21,7 +21,7 @@ tracks/0/path = NodePath(".:transform/rotation")
 tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = {
-"times": FloatArray( 0, 0.3, 0.6, 1 ),
+"times": FloatArray( 0, 0.2, 0.4, 0.6 ),
 "transitions": FloatArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector3( 11.3382, -8.2469, 2.04558 ), Vector3( 31.3711, 31.1474, -0.246415 ), Vector3( -3.17012, 66.4174, -105.405 ), Vector3( 11.3382, -8.2469, 2.04558 ) ]
@@ -30,7 +30,7 @@ tracks/0/keys = {
 [node name="Spatial" type="Spatial"]
 
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-transform/local = Transform( 0.989028, -0.0353254, -0.143439, 0.0068158, 0.980865, -0.194567, 0.147567, 0.191454, 0.970345, -0.357382, -1.52703, -1.38835 )
+transform/local = Transform( 0.989028, -0.0353254, -0.143439, 0.00681576, 0.980865, -0.194567, 0.147568, 0.191454, 0.970345, -0.357382, -1.52703, -1.38835 )
 script/script = ExtResource( 1 )
 
 [node name="Toco" parent="." instance=ExtResource( 2 )]
