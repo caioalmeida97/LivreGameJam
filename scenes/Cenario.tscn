@@ -1,15 +1,23 @@
-[gd_scene load_steps=11 format=1]
+[gd_scene load_steps=19 format=1]
 
 [ext_resource path="res://meshes/Paredes2.scn" type="PackedScene" id=1]
 [ext_resource path="res://meshes/Boxe.scn" type="PackedScene" id=2]
-[ext_resource path="res://meshes/Pia.scn" type="PackedScene" id=3]
-[ext_resource path="res://meshes/Lixeira.scn" type="PackedScene" id=4]
-[ext_resource path="res://meshes/Espelho.scn" type="PackedScene" id=5]
-[ext_resource path="res://meshes/Poca.scn" type="PackedScene" id=6]
-[ext_resource path="res://meshes/Lampada.scn" type="PackedScene" id=7]
-[ext_resource path="res://meshes/Armario.scn" type="PackedScene" id=8]
-[ext_resource path="res://meshes/Banco.scn" type="PackedScene" id=9]
-[ext_resource path="res://meshes/Porta.scn" type="PackedScene" id=10]
+[ext_resource path="res://meshes/Privada.scn" type="PackedScene" id=3]
+[ext_resource path="res://meshes/Pia.scn" type="PackedScene" id=4]
+[ext_resource path="res://meshes/Lixeira.scn" type="PackedScene" id=5]
+[ext_resource path="res://meshes/Espelho.scn" type="PackedScene" id=6]
+[ext_resource path="res://meshes/Poca.scn" type="PackedScene" id=7]
+[ext_resource path="res://meshes/Lampada.scn" type="PackedScene" id=8]
+[ext_resource path="res://meshes/Armario.scn" type="PackedScene" id=9]
+[ext_resource path="res://meshes/Banco.scn" type="PackedScene" id=10]
+[ext_resource path="res://meshes/Aquecedor.scn" type="PackedScene" id=11]
+[ext_resource path="res://meshes/Porta.scn" type="PackedScene" id=12]
+[ext_resource path="res://meshes/CanoVermelho.scn" type="PackedScene" id=13]
+[ext_resource path="res://meshes/CanoMedio.scn" type="PackedScene" id=14]
+[ext_resource path="res://meshes/CanoLongo.scn" type="PackedScene" id=15]
+[ext_resource path="res://meshes/CanoCurto.scn" type="PackedScene" id=16]
+[ext_resource path="res://meshes/Chuveiro.scn" type="PackedScene" id=17]
+[ext_resource path="res://meshes/Ralo.scn" type="PackedScene" id=18]
 
 [node name="Spatial" type="Spatial"]
 
@@ -23,47 +31,73 @@ editor/display_folded = true
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 transform/local = Transform( -1, -8.74228e-08, 0, -8.74228e-08, 1, -8.74228e-08, 7.64274e-15, -8.74228e-08, -1, 13.9411, 0, -0.994765 )
 
-[node name="Boxe" parent="Paredes2/Feminino" instance=ExtResource( 2 )]
+[node name="Boxes" type="Spatial" parent="Paredes2/Feminino"]
 
-transform/local = Transform( -1.23382e-07, 0, 2.82264, 0, 2.82264, 0, -2.82264, 0, -1.23382e-07, -2.97868, 0, 25.33 )
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, -6.6815e-22, 0, -6.6815e-22, 1, 0, 0, 0, 1, 0, 0, 0 )
 
-[node name="Boxe1" parent="Paredes2/Feminino" instance=ExtResource( 2 )]
+[node name="Boxe" parent="Paredes2/Feminino/Boxes" instance=ExtResource( 2 )]
 
-transform/local = Transform( -1.23382e-07, 0, 2.82264, 0, 2.82264, 0, -2.82264, 0, -1.23382e-07, 3.4895, 0, 25.33 )
+editor/display_folded = true
+transform/local = Transform( -1.23382e-07, -1.88595e-21, 2.82264, 0, 2.82264, -1.07864e-14, -2.82264, 0, -1.23382e-07, -2.97868, -0.124663, 25.33 )
 
-[node name="Boxe2" parent="Paredes2/Feminino" instance=ExtResource( 2 )]
+[node name="Privada" parent="Paredes2/Feminino/Boxes/Boxe" instance=ExtResource( 3 )]
 
-transform/local = Transform( -1.23382e-07, 0, 2.82264, 0, 2.82264, 0, -2.82264, 0, -1.23382e-07, 10.1969, 0, 25.33 )
+transform/local = Transform( 0.00449375, 1.19372e-07, 0.685008, -1.81969e-05, 0.685023, 0, -0.685008, -1.81965e-05, 0.00449375, 0.114409, 0.675419, 0 )
 
-[node name="Boxe3" parent="Paredes2/Feminino" instance=ExtResource( 2 )]
+[node name="Boxe1" parent="Paredes2/Feminino/Boxes" instance=ExtResource( 2 )]
 
-transform/local = Transform( -1.23382e-07, 0, 2.82264, 0, 2.82264, 0, -2.82264, 0, -1.23382e-07, 16.6687, 0, 25.33 )
+editor/display_folded = true
+transform/local = Transform( -1.23382e-07, -1.88595e-21, 2.82264, 0, 2.82264, -1.07864e-14, -2.82264, 0, -1.23382e-07, 2.71381, -0.124662, 25.33 )
 
-[node name="Pia" parent="Paredes2/Feminino" instance=ExtResource( 3 )]
+[node name="Privada" parent="Paredes2/Feminino/Boxes/Boxe1" instance=ExtResource( 3 )]
+
+transform/local = Transform( 0.00449375, 1.19372e-07, 0.685008, -1.81969e-05, 0.685023, 0, -0.685008, -1.81965e-05, 0.00449375, 0.114409, 0.675419, 0 )
+
+[node name="Boxe2" parent="Paredes2/Feminino/Boxes" instance=ExtResource( 2 )]
+
+editor/display_folded = true
+transform/local = Transform( -1.23382e-07, -1.88595e-21, 2.82264, 0, 2.82264, -1.07864e-14, -2.82264, 0, -1.23382e-07, 8.46485, -0.124662, 25.33 )
+
+[node name="Privada" parent="Paredes2/Feminino/Boxes/Boxe2" instance=ExtResource( 3 )]
+
+transform/local = Transform( 0.00449375, 1.19372e-07, 0.685008, -1.81969e-05, 0.685023, 0, -0.685008, -1.81965e-05, 0.00449375, 0.114409, 0.675419, 0 )
+
+[node name="Boxe3" parent="Paredes2/Feminino/Boxes" instance=ExtResource( 2 )]
+
+editor/display_folded = true
+transform/local = Transform( -1.23382e-07, -1.88595e-21, 2.82264, 0, 2.82264, -1.07864e-14, -2.82264, 0, -1.23382e-07, 14.212, -0.124661, 25.33 )
+
+[node name="Privada" parent="Paredes2/Feminino/Boxes/Boxe3" instance=ExtResource( 3 )]
+
+transform/local = Transform( 0.00449375, 1.19372e-07, 0.685008, -1.81969e-05, 0.685023, 0, -0.685008, -1.81965e-05, 0.00449375, 0.114409, 0.675419, 0 )
+
+[node name="Pia" parent="Paredes2/Feminino" instance=ExtResource( 4 )]
 
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.10009, 3.47495, 0.922174 )
 
-[node name="Pia1" parent="Paredes2/Feminino" instance=ExtResource( 3 )]
+[node name="Pia1" parent="Paredes2/Feminino" instance=ExtResource( 4 )]
 
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.43891, 3.47495, 0.922174 )
 
-[node name="Pia2" parent="Paredes2/Feminino" instance=ExtResource( 3 )]
+[node name="Pia2" parent="Paredes2/Feminino" instance=ExtResource( 4 )]
 
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.79367, 3.47495, 0.922174 )
 
-[node name="Pia3" parent="Paredes2/Feminino" instance=ExtResource( 3 )]
+[node name="Pia3" parent="Paredes2/Feminino" instance=ExtResource( 4 )]
 
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2242, 3.47495, 0.922174 )
 
-[node name="Pia4" parent="Paredes2/Feminino" instance=ExtResource( 3 )]
+[node name="Pia4" parent="Paredes2/Feminino" instance=ExtResource( 4 )]
 
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.6336, 3.47495, 0.922174 )
 
-[node name="Lixeira1" parent="Paredes2/Feminino" instance=ExtResource( 4 )]
+[node name="Lixeira1" parent="Paredes2/Feminino" instance=ExtResource( 5 )]
 
 transform/local = Transform( -0.903277, -7.8967e-08, 6.90352e-15, -7.8967e-08, 0.903277, -7.8967e-08, 4.59063e-21, -7.8967e-08, -0.903277, 19.2523, 1.66684, 2.12306 )
 
-[node name="Espelho" parent="Paredes2/Feminino" instance=ExtResource( 5 )]
+[node name="Espelho" parent="Paredes2/Feminino" instance=ExtResource( 6 )]
 
 transform/local = Transform( -1.52818e-07, -3.05636e-07, -3.49606, -3.05637e-07, 3.49606, -3.05636e-07, 3.49606, 3.05637e-07, -1.52818e-07, 5.37148, 8.04084, -0.023644 )
 
@@ -73,47 +107,72 @@ editor/display_folded = true
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.44736, 0, 0.0547596 )
 
-[node name="Boxe" parent="Paredes2/Masculino" instance=ExtResource( 2 )]
+[node name="Boxes1" type="Spatial" parent="Paredes2/Masculino"]
 
-transform/local = Transform( -1.23381e-07, 0, 2.82264, 0, 2.82264, 0, -2.82264, 0, -1.23381e-07, -4.59565, 0, 25.33 )
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, -8.72665e-08, 0, 8.72665e-08, 1, -0.0270157, 0, 26.1466 )
 
-[node name="Boxe1" parent="Paredes2/Masculino" instance=ExtResource( 2 )]
+[node name="Boxe" parent="Paredes2/Masculino/Boxes1" instance=ExtResource( 2 )]
 
-transform/local = Transform( -1.23381e-07, 0, 2.82264, 0, 2.82264, 0, -2.82264, 0, -1.23381e-07, 1.87252, 0, 25.33 )
+editor/display_folded = true
+transform/local = Transform( -1.23382e-07, -1.88595e-21, 2.82264, 0, 2.82264, -1.07864e-14, -2.82264, 0, -1.23382e-07, -2.97868, -0.124665, 0.0805912 )
 
-[node name="Boxe2" parent="Paredes2/Masculino" instance=ExtResource( 2 )]
+[node name="Privada" parent="Paredes2/Masculino/Boxes1/Boxe" instance=ExtResource( 3 )]
 
-transform/local = Transform( -1.23381e-07, 0, 2.82264, 0, 2.82264, 0, -2.82264, 0, -1.23381e-07, 8.57997, 0, 25.33 )
+transform/local = Transform( 0.00449375, 1.19372e-07, 0.685008, -1.81969e-05, 0.685023, 0, -0.685008, -1.81965e-05, 0.00449375, 0.114409, 0.675419, 0 )
 
-[node name="Boxe3" parent="Paredes2/Masculino" instance=ExtResource( 2 )]
+[node name="Boxe1" parent="Paredes2/Masculino/Boxes1" instance=ExtResource( 2 )]
 
-transform/local = Transform( -1.23381e-07, 0, 2.82264, 0, 2.82264, 0, -2.82264, 0, -1.23381e-07, 15.0517, 0, 25.33 )
+editor/display_folded = true
+transform/local = Transform( -1.23382e-07, -1.88595e-21, 2.82264, 0, 2.82264, -1.07864e-14, -2.82264, 0, -1.23382e-07, 2.71381, -0.124665, 0.0805912 )
 
-[node name="Pia" parent="Paredes2/Masculino" instance=ExtResource( 3 )]
+[node name="Privada" parent="Paredes2/Masculino/Boxes1/Boxe1" instance=ExtResource( 3 )]
+
+transform/local = Transform( 0.00449375, 1.19372e-07, 0.685008, -1.81969e-05, 0.685023, 0, -0.685008, -1.81965e-05, 0.00449375, 0.114409, 0.675419, 0 )
+
+[node name="Boxe2" parent="Paredes2/Masculino/Boxes1" instance=ExtResource( 2 )]
+
+editor/display_folded = true
+transform/local = Transform( -1.23382e-07, -1.88595e-21, 2.82264, 0, 2.82264, -1.07864e-14, -2.82264, 0, -1.23382e-07, 8.46485, -0.124664, 0.0805912 )
+
+[node name="Privada" parent="Paredes2/Masculino/Boxes1/Boxe2" instance=ExtResource( 3 )]
+
+transform/local = Transform( 0.00449375, 1.19372e-07, 0.685008, -1.81969e-05, 0.685023, 0, -0.685008, -1.81965e-05, 0.00449375, 0.114409, 0.675419, 0 )
+
+[node name="Boxe3" parent="Paredes2/Masculino/Boxes1" instance=ExtResource( 2 )]
+
+editor/display_folded = true
+transform/local = Transform( -1.23382e-07, -1.88595e-21, 2.82264, 0, 2.82264, -1.07864e-14, -2.82264, 0, -1.23382e-07, 14.212, -0.124664, 0.0805912 )
+
+[node name="Privada" parent="Paredes2/Masculino/Boxes1/Boxe3" instance=ExtResource( 3 )]
+
+transform/local = Transform( 0.00449375, 1.19372e-07, 0.685008, -1.81969e-05, 0.685023, 0, -0.685008, -1.81965e-05, 0.00449375, 0.114409, 0.675419, 0 )
+
+[node name="Pia" parent="Paredes2/Masculino" instance=ExtResource( 4 )]
 
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.10009, 3.47495, 0.922174 )
 
-[node name="Pia1" parent="Paredes2/Masculino" instance=ExtResource( 3 )]
+[node name="Pia1" parent="Paredes2/Masculino" instance=ExtResource( 4 )]
 
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.43891, 3.47495, 0.922174 )
 
-[node name="Pia2" parent="Paredes2/Masculino" instance=ExtResource( 3 )]
+[node name="Pia2" parent="Paredes2/Masculino" instance=ExtResource( 4 )]
 
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.79367, 3.47495, 0.922174 )
 
-[node name="Pia3" parent="Paredes2/Masculino" instance=ExtResource( 3 )]
+[node name="Pia3" parent="Paredes2/Masculino" instance=ExtResource( 4 )]
 
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2242, 3.47495, 0.922174 )
 
-[node name="Pia4" parent="Paredes2/Masculino" instance=ExtResource( 3 )]
+[node name="Pia4" parent="Paredes2/Masculino" instance=ExtResource( 4 )]
 
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.6336, 3.47495, 0.922174 )
 
-[node name="Lixeira" parent="Paredes2/Masculino" instance=ExtResource( 4 )]
+[node name="Lixeira" parent="Paredes2/Masculino" instance=ExtResource( 5 )]
 
 transform/local = Transform( 0.903277, 0, 0, 0, 0.903277, 0, 0, 0, 0.903277, -7.75861, 1.66684, 2.44864 )
 
-[node name="Espelho1" parent="Paredes2/Masculino" instance=ExtResource( 5 )]
+[node name="Espelho1" parent="Paredes2/Masculino" instance=ExtResource( 6 )]
 
 transform/local = Transform( -1.49202e-07, 0, -3.41333, -2.42532e-14, 3.41333, -1.30436e-14, 3.41333, 0, -1.49202e-07, 5.64282, 8.04083, -0.070501 )
 
@@ -122,19 +181,19 @@ transform/local = Transform( -1.49202e-07, 0, -3.41333, -2.42532e-14, 3.41333, -
 editor/display_folded = true
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
-[node name="Poca" parent="Paredes2/Poças" instance=ExtResource( 6 )]
+[node name="Poca" parent="Paredes2/Poças" instance=ExtResource( 7 )]
 
 transform/local = Transform( 3.95013, 0, 0, 0, 3.95013, 0, 0, 0, 3.95013, 0, 0.0469068, 1.25184 )
 
-[node name="Poca1" parent="Paredes2/Poças" instance=ExtResource( 6 )]
+[node name="Poca1" parent="Paredes2/Poças" instance=ExtResource( 7 )]
 
 transform/local = Transform( -2.09523, 0, 3.34866, 0, 3.95013, 0, -3.34866, 0, -2.09523, 11.2917, 0.0469068, 20.1096 )
 
-[node name="Poca2" parent="Paredes2/Poças" instance=ExtResource( 6 )]
+[node name="Poca2" parent="Paredes2/Poças" instance=ExtResource( 7 )]
 
 transform/local = Transform( -2.09523, 0, 3.34866, 0, 3.95013, 0, -3.34866, 0, -2.09523, -4.806, 0.0469068, -23.4128 )
 
-[node name="Poca3" parent="Paredes2/Poças" instance=ExtResource( 6 )]
+[node name="Poca3" parent="Paredes2/Poças" instance=ExtResource( 7 )]
 
 transform/local = Transform( 1.25803, 0, 1.68893, 0, 2.10598, 0, -1.68893, 0, 1.25803, 10.8105, 0.0469068, -13.8609 )
 
@@ -143,83 +202,83 @@ transform/local = Transform( 1.25803, 0, 1.68893, 0, 2.10598, 0, -1.68893, 0, 1.
 editor/display_folded = true
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
-[node name="Lampada" parent="Paredes2/Lampadas" instance=ExtResource( 7 )]
+[node name="Lampada" parent="Paredes2/Lampadas" instance=ExtResource( 8 )]
 
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.48367, 15.496, 11.695 )
 
-[node name="Lampada1" parent="Paredes2/Lampadas" instance=ExtResource( 7 )]
+[node name="Lampada1" parent="Paredes2/Lampadas" instance=ExtResource( 8 )]
 
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.48367, 15.496, -14.4715 )
 
-[node name="Lampada2" parent="Paredes2/Lampadas" instance=ExtResource( 7 )]
+[node name="Lampada2" parent="Paredes2/Lampadas" instance=ExtResource( 8 )]
 
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 53.8611, 15.496, -14.4715 )
 
-[node name="Lampada5" parent="Paredes2/Lampadas" instance=ExtResource( 7 )]
+[node name="Lampada5" parent="Paredes2/Lampadas" instance=ExtResource( 8 )]
 
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 53.8611, 15.496, -35.7953 )
 
-[node name="Lampada6" parent="Paredes2/Lampadas" instance=ExtResource( 7 )]
+[node name="Lampada6" parent="Paredes2/Lampadas" instance=ExtResource( 8 )]
 
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.2152, 15.496, -35.7953 )
 
-[node name="Lampada7" parent="Paredes2/Lampadas" instance=ExtResource( 7 )]
+[node name="Lampada7" parent="Paredes2/Lampadas" instance=ExtResource( 8 )]
 
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.2152, 15.496, 34.2022 )
 
-[node name="Lampada8" parent="Paredes2/Lampadas" instance=ExtResource( 7 )]
+[node name="Lampada8" parent="Paredes2/Lampadas" instance=ExtResource( 8 )]
 
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 55.7748, 15.496, 34.2022 )
 
-[node name="Lampada4" parent="Paredes2/Lampadas" instance=ExtResource( 7 )]
+[node name="Lampada4" parent="Paredes2/Lampadas" instance=ExtResource( 8 )]
 
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 53.8611, 15.496, 11.7094 )
 
-[node name="Lampada3" parent="Paredes2/Lampadas" instance=ExtResource( 7 )]
+[node name="Lampada3" parent="Paredes2/Lampadas" instance=ExtResource( 8 )]
 
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 82.4556, 15.496, -14.4715 )
 
-[node name="Lampada5 2" parent="Paredes2/Lampadas" instance=ExtResource( 7 )]
+[node name="Lampada5 2" parent="Paredes2/Lampadas" instance=ExtResource( 8 )]
 
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 82.4556, 15.496, -35.7953 )
 
-[node name="Lampada53" parent="Paredes2/Lampadas" instance=ExtResource( 7 )]
+[node name="Lampada53" parent="Paredes2/Lampadas" instance=ExtResource( 8 )]
 
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3793, 15.496, -35.7953 )
 
-[node name="Lampada54" parent="Paredes2/Lampadas" instance=ExtResource( 7 )]
+[node name="Lampada54" parent="Paredes2/Lampadas" instance=ExtResource( 8 )]
 
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3793, 15.496, 34.2022 )
 
-[node name="Lampada55" parent="Paredes2/Lampadas" instance=ExtResource( 7 )]
+[node name="Lampada55" parent="Paredes2/Lampadas" instance=ExtResource( 8 )]
 
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 84.3693, 15.496, 34.2022 )
 
-[node name="Lampada56" parent="Paredes2/Lampadas" instance=ExtResource( 7 )]
+[node name="Lampada56" parent="Paredes2/Lampadas" instance=ExtResource( 8 )]
 
 transform/local = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 106.732, 15.496, -19.3188 )
 
-[node name="Lampada58" parent="Paredes2/Lampadas" instance=ExtResource( 7 )]
+[node name="Lampada58" parent="Paredes2/Lampadas" instance=ExtResource( 8 )]
 
 transform/local = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32.377, 15.496, -19.3188 )
 
-[node name="Lampada59" parent="Paredes2/Lampadas" instance=ExtResource( 7 )]
+[node name="Lampada59" parent="Paredes2/Lampadas" instance=ExtResource( 8 )]
 
 transform/local = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -21.7599, 15.496, -19.3188 )
 
-[node name="Lampada57" parent="Paredes2/Lampadas" instance=ExtResource( 7 )]
+[node name="Lampada57" parent="Paredes2/Lampadas" instance=ExtResource( 8 )]
 
 transform/local = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 106.732, 15.496, 18.5716 )
 
-[node name="Lampada58 2" parent="Paredes2/Lampadas" instance=ExtResource( 7 )]
+[node name="Lampada58 2" parent="Paredes2/Lampadas" instance=ExtResource( 8 )]
 
 transform/local = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 32.377, 15.496, 18.5716 )
 
-[node name="Lampada583" parent="Paredes2/Lampadas" instance=ExtResource( 7 )]
+[node name="Lampada583" parent="Paredes2/Lampadas" instance=ExtResource( 8 )]
 
 transform/local = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -21.7599, 15.496, 18.5716 )
 
-[node name="Lampada4 2" parent="Paredes2/Lampadas" instance=ExtResource( 7 )]
+[node name="Lampada4 2" parent="Paredes2/Lampadas" instance=ExtResource( 8 )]
 
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 82.4556, 15.496, 11.7094 )
 
@@ -234,31 +293,31 @@ transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40.1271, 0, 6.92378 )
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.2299, 0, 0 )
 
-[node name="Armario" parent="Paredes2/SubVest1/Armarios1" instance=ExtResource( 8 )]
+[node name="Armario" parent="Paredes2/SubVest1/Armarios1" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.0888, 0, 0, 0, 1.0888, 0, 0, 0, 1.0888, 0, 0, 0 )
 
-[node name="Armario1" parent="Paredes2/SubVest1/Armarios1" instance=ExtResource( 8 )]
+[node name="Armario1" parent="Paredes2/SubVest1/Armarios1" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 2.30626 )
 
-[node name="Armario2" parent="Paredes2/SubVest1/Armarios1" instance=ExtResource( 8 )]
+[node name="Armario2" parent="Paredes2/SubVest1/Armarios1" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 4.61181 )
 
-[node name="Armario3" parent="Paredes2/SubVest1/Armarios1" instance=ExtResource( 8 )]
+[node name="Armario3" parent="Paredes2/SubVest1/Armarios1" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 6.94573 )
 
-[node name="Armario4" parent="Paredes2/SubVest1/Armarios1" instance=ExtResource( 8 )]
+[node name="Armario4" parent="Paredes2/SubVest1/Armarios1" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 9.34164 )
 
-[node name="Armario5" parent="Paredes2/SubVest1/Armarios1" instance=ExtResource( 8 )]
+[node name="Armario5" parent="Paredes2/SubVest1/Armarios1" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 11.6628 )
 
-[node name="Armario6" parent="Paredes2/SubVest1/Armarios1" instance=ExtResource( 8 )]
+[node name="Armario6" parent="Paredes2/SubVest1/Armarios1" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 13.9802 )
 
@@ -268,31 +327,31 @@ editor/display_folded = true
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 transform/local = Transform( -1, -8.74228e-08, 0, -8.74228e-08, 1, -8.74228e-08, 7.64274e-15, -8.74228e-08, -1, 19.9743, 0, 13.2923 )
 
-[node name="Armario" parent="Paredes2/SubVest1/Armarios2" instance=ExtResource( 8 )]
+[node name="Armario" parent="Paredes2/SubVest1/Armarios2" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.10846, -7.4062e-22, 1.69407e-21, -7.4062e-22, 1.10846, 0, 0, 0, 1.10846, 0, 0, 0 )
 
-[node name="Armario1" parent="Paredes2/SubVest1/Armarios2" instance=ExtResource( 8 )]
+[node name="Armario1" parent="Paredes2/SubVest1/Armarios2" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 2.30626 )
 
-[node name="Armario2" parent="Paredes2/SubVest1/Armarios2" instance=ExtResource( 8 )]
+[node name="Armario2" parent="Paredes2/SubVest1/Armarios2" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 4.61181 )
 
-[node name="Armario3" parent="Paredes2/SubVest1/Armarios2" instance=ExtResource( 8 )]
+[node name="Armario3" parent="Paredes2/SubVest1/Armarios2" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 6.94573 )
 
-[node name="Armario4" parent="Paredes2/SubVest1/Armarios2" instance=ExtResource( 8 )]
+[node name="Armario4" parent="Paredes2/SubVest1/Armarios2" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 9.34164 )
 
-[node name="Armario5" parent="Paredes2/SubVest1/Armarios2" instance=ExtResource( 8 )]
+[node name="Armario5" parent="Paredes2/SubVest1/Armarios2" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 11.6628 )
 
-[node name="Armario6" parent="Paredes2/SubVest1/Armarios2" instance=ExtResource( 8 )]
+[node name="Armario6" parent="Paredes2/SubVest1/Armarios2" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 13.9802 )
 
@@ -301,39 +360,39 @@ transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 
 editor/display_folded = true
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
-[node name="Armario" parent="Paredes2/SubVest1/Armarios" instance=ExtResource( 8 )]
+[node name="Armario" parent="Paredes2/SubVest1/Armarios" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09234, 0, 0, 0, 1.09234, 0, 0, 0, 1.09234, 0, 0, 0 )
 
-[node name="Armario1" parent="Paredes2/SubVest1/Armarios" instance=ExtResource( 8 )]
+[node name="Armario1" parent="Paredes2/SubVest1/Armarios" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 2.30626 )
 
-[node name="Armario2" parent="Paredes2/SubVest1/Armarios" instance=ExtResource( 8 )]
+[node name="Armario2" parent="Paredes2/SubVest1/Armarios" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 4.61181 )
 
-[node name="Armario3" parent="Paredes2/SubVest1/Armarios" instance=ExtResource( 8 )]
+[node name="Armario3" parent="Paredes2/SubVest1/Armarios" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 6.94573 )
 
-[node name="Armario4" parent="Paredes2/SubVest1/Armarios" instance=ExtResource( 8 )]
+[node name="Armario4" parent="Paredes2/SubVest1/Armarios" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 9.34164 )
 
-[node name="Armario5" parent="Paredes2/SubVest1/Armarios" instance=ExtResource( 8 )]
+[node name="Armario5" parent="Paredes2/SubVest1/Armarios" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 11.6628 )
 
-[node name="Armario6" parent="Paredes2/SubVest1/Armarios" instance=ExtResource( 8 )]
+[node name="Armario6" parent="Paredes2/SubVest1/Armarios" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 13.9802 )
 
-[node name="Banco" parent="Paredes2/SubVest1" instance=ExtResource( 9 )]
+[node name="Banco" parent="Paredes2/SubVest1" instance=ExtResource( 10 )]
 
 transform/local = Transform( -8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 10.0229, -0.0371501, 11.411 )
 
-[node name="Banco1" parent="Paredes2/SubVest1" instance=ExtResource( 9 )]
+[node name="Banco1" parent="Paredes2/SubVest1" instance=ExtResource( 10 )]
 
 transform/local = Transform( -8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 10.0229, -0.0371501, 1.34065 )
 
@@ -349,31 +408,31 @@ editor/display_folded = true
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.2299, 0, 0 )
 
-[node name="Armario" parent="Paredes2/SubVest2/Armarios1" instance=ExtResource( 8 )]
+[node name="Armario" parent="Paredes2/SubVest2/Armarios1" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.10013, 0, 0, 0, 1.10013, 0, 0, 0, 1.10013, 0, 0, 0 )
 
-[node name="Armario1" parent="Paredes2/SubVest2/Armarios1" instance=ExtResource( 8 )]
+[node name="Armario1" parent="Paredes2/SubVest2/Armarios1" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 2.30626 )
 
-[node name="Armario2" parent="Paredes2/SubVest2/Armarios1" instance=ExtResource( 8 )]
+[node name="Armario2" parent="Paredes2/SubVest2/Armarios1" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 4.61181 )
 
-[node name="Armario3" parent="Paredes2/SubVest2/Armarios1" instance=ExtResource( 8 )]
+[node name="Armario3" parent="Paredes2/SubVest2/Armarios1" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 6.94573 )
 
-[node name="Armario4" parent="Paredes2/SubVest2/Armarios1" instance=ExtResource( 8 )]
+[node name="Armario4" parent="Paredes2/SubVest2/Armarios1" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 9.34164 )
 
-[node name="Armario5" parent="Paredes2/SubVest2/Armarios1" instance=ExtResource( 8 )]
+[node name="Armario5" parent="Paredes2/SubVest2/Armarios1" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 11.6628 )
 
-[node name="Armario6" parent="Paredes2/SubVest2/Armarios1" instance=ExtResource( 8 )]
+[node name="Armario6" parent="Paredes2/SubVest2/Armarios1" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 13.9802 )
 
@@ -383,31 +442,31 @@ editor/display_folded = true
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 transform/local = Transform( -1, -8.74228e-08, 0, -8.74228e-08, 1, -8.74228e-08, 7.64274e-15, -8.74228e-08, -1, 19.9743, 0, 13.2923 )
 
-[node name="Armario" parent="Paredes2/SubVest2/Armarios2" instance=ExtResource( 8 )]
+[node name="Armario" parent="Paredes2/SubVest2/Armarios2" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.10928, -7.41169e-22, 1.69407e-21, -7.41169e-22, 1.10928, 0, 0, 0, 1.10928, 0, 0, 0 )
 
-[node name="Armario1" parent="Paredes2/SubVest2/Armarios2" instance=ExtResource( 8 )]
+[node name="Armario1" parent="Paredes2/SubVest2/Armarios2" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 2.30626 )
 
-[node name="Armario2" parent="Paredes2/SubVest2/Armarios2" instance=ExtResource( 8 )]
+[node name="Armario2" parent="Paredes2/SubVest2/Armarios2" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 4.61181 )
 
-[node name="Armario3" parent="Paredes2/SubVest2/Armarios2" instance=ExtResource( 8 )]
+[node name="Armario3" parent="Paredes2/SubVest2/Armarios2" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 6.94573 )
 
-[node name="Armario4" parent="Paredes2/SubVest2/Armarios2" instance=ExtResource( 8 )]
+[node name="Armario4" parent="Paredes2/SubVest2/Armarios2" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 9.34164 )
 
-[node name="Armario5" parent="Paredes2/SubVest2/Armarios2" instance=ExtResource( 8 )]
+[node name="Armario5" parent="Paredes2/SubVest2/Armarios2" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 11.6628 )
 
-[node name="Armario6" parent="Paredes2/SubVest2/Armarios2" instance=ExtResource( 8 )]
+[node name="Armario6" parent="Paredes2/SubVest2/Armarios2" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 13.9802 )
 
@@ -416,41 +475,45 @@ transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 
 editor/display_folded = true
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
-[node name="Armario" parent="Paredes2/SubVest2/Armarios" instance=ExtResource( 8 )]
+[node name="Armario" parent="Paredes2/SubVest2/Armarios" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.0944, 0, 0, 0, 1.0944, 0, 0, 0, 1.0944, 0, 0, 0 )
 
-[node name="Armario1" parent="Paredes2/SubVest2/Armarios" instance=ExtResource( 8 )]
+[node name="Armario1" parent="Paredes2/SubVest2/Armarios" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 2.30626 )
 
-[node name="Armario2" parent="Paredes2/SubVest2/Armarios" instance=ExtResource( 8 )]
+[node name="Armario2" parent="Paredes2/SubVest2/Armarios" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 4.61181 )
 
-[node name="Armario3" parent="Paredes2/SubVest2/Armarios" instance=ExtResource( 8 )]
+[node name="Armario3" parent="Paredes2/SubVest2/Armarios" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 6.94573 )
 
-[node name="Armario4" parent="Paredes2/SubVest2/Armarios" instance=ExtResource( 8 )]
+[node name="Armario4" parent="Paredes2/SubVest2/Armarios" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 9.34164 )
 
-[node name="Armario5" parent="Paredes2/SubVest2/Armarios" instance=ExtResource( 8 )]
+[node name="Armario5" parent="Paredes2/SubVest2/Armarios" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 11.6628 )
 
-[node name="Armario6" parent="Paredes2/SubVest2/Armarios" instance=ExtResource( 8 )]
+[node name="Armario6" parent="Paredes2/SubVest2/Armarios" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 13.9802 )
 
-[node name="Banco" parent="Paredes2/SubVest2" instance=ExtResource( 9 )]
+[node name="Banco" parent="Paredes2/SubVest2" instance=ExtResource( 10 )]
 
 transform/local = Transform( -8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 10.0229, -0.0371501, 11.411 )
 
-[node name="Banco1" parent="Paredes2/SubVest2" instance=ExtResource( 9 )]
+[node name="Banco1" parent="Paredes2/SubVest2" instance=ExtResource( 10 )]
 
 transform/local = Transform( -8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 10.0229, -0.0371501, 1.34065 )
+
+[node name="Aquecedor1" parent="Paredes2" instance=ExtResource( 11 )]
+
+transform/local = Transform( -0.35, -3.0598e-08, 0, -4.98504e-15, 5.70222e-08, -0.35, 3.0598e-08, -0.35, -5.70222e-08, 77.3779, 2.75157, -0.954269 )
 
 [node name="SubVest3" type="Spatial" parent="Paredes2"]
 
@@ -462,33 +525,33 @@ transform/local = Transform( -1, -8.74228e-08, 0, -8.74228e-08, 1, -8.74228e-08,
 
 editor/display_folded = true
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.2299, 0, 0 )
+transform/local = Transform( 1, -6.6815e-22, 0, -6.6815e-22, 1, 0, 0, 0, 1, 15.4271, -5.94718e-07, 0 )
 
-[node name="Armario" parent="Paredes2/SubVest3/Armarios1" instance=ExtResource( 8 )]
+[node name="Armario" parent="Paredes2/SubVest3/Armarios1" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09445, -7.31255e-22, 0, -7.31255e-22, 1.09445, 0, 0, 0, 1.09445, 0, 0, 0 )
 
-[node name="Armario1" parent="Paredes2/SubVest3/Armarios1" instance=ExtResource( 8 )]
+[node name="Armario1" parent="Paredes2/SubVest3/Armarios1" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 2.30626 )
 
-[node name="Armario2" parent="Paredes2/SubVest3/Armarios1" instance=ExtResource( 8 )]
+[node name="Armario2" parent="Paredes2/SubVest3/Armarios1" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 4.61181 )
 
-[node name="Armario3" parent="Paredes2/SubVest3/Armarios1" instance=ExtResource( 8 )]
+[node name="Armario3" parent="Paredes2/SubVest3/Armarios1" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 6.94573 )
 
-[node name="Armario4" parent="Paredes2/SubVest3/Armarios1" instance=ExtResource( 8 )]
+[node name="Armario4" parent="Paredes2/SubVest3/Armarios1" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 9.34164 )
 
-[node name="Armario5" parent="Paredes2/SubVest3/Armarios1" instance=ExtResource( 8 )]
+[node name="Armario5" parent="Paredes2/SubVest3/Armarios1" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 11.6628 )
 
-[node name="Armario6" parent="Paredes2/SubVest3/Armarios1" instance=ExtResource( 8 )]
+[node name="Armario6" parent="Paredes2/SubVest3/Armarios1" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 13.9802 )
 
@@ -496,77 +559,43 @@ transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 
 
 editor/display_folded = true
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-transform/local = Transform( -1, -8.74228e-08, 0, -8.74228e-08, 1, -8.74228e-08, 7.64274e-15, -8.74228e-08, -1, 19.9743, 0, 13.2923 )
+transform/local = Transform( -1, -8.74228e-08, 0, -8.74228e-08, 1, -8.74228e-08, 7.64274e-15, -8.74228e-08, -1, 13.1715, -5.94716e-07, 13.2923 )
 
-[node name="Armario" parent="Paredes2/SubVest3/Armarios2" instance=ExtResource( 8 )]
+[node name="Armario" parent="Paredes2/SubVest3/Armarios2" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09545, 0, 0, 0, 1.09545, 7.17465e-43, 0, 0, 1.09545, 0, 0, 0 )
 
-[node name="Armario1" parent="Paredes2/SubVest3/Armarios2" instance=ExtResource( 8 )]
+[node name="Armario1" parent="Paredes2/SubVest3/Armarios2" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 2.30626 )
 
-[node name="Armario2" parent="Paredes2/SubVest3/Armarios2" instance=ExtResource( 8 )]
+[node name="Armario2" parent="Paredes2/SubVest3/Armarios2" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 4.61181 )
 
-[node name="Armario3" parent="Paredes2/SubVest3/Armarios2" instance=ExtResource( 8 )]
+[node name="Armario3" parent="Paredes2/SubVest3/Armarios2" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 6.94573 )
 
-[node name="Armario4" parent="Paredes2/SubVest3/Armarios2" instance=ExtResource( 8 )]
+[node name="Armario4" parent="Paredes2/SubVest3/Armarios2" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 9.34164 )
 
-[node name="Armario5" parent="Paredes2/SubVest3/Armarios2" instance=ExtResource( 8 )]
+[node name="Armario5" parent="Paredes2/SubVest3/Armarios2" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 11.6628 )
 
-[node name="Armario6" parent="Paredes2/SubVest3/Armarios2" instance=ExtResource( 8 )]
+[node name="Armario6" parent="Paredes2/SubVest3/Armarios2" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 13.9802 )
 
-[node name="Armarios" type="Spatial" parent="Paredes2/SubVest3"]
+[node name="Banco" parent="Paredes2/SubVest3" instance=ExtResource( 10 )]
 
-editor/display_folded = true
-_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-transform/local = Transform( 1, -6.6815e-22, 0, -6.6815e-22, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( -8.74228e-08, -1.3363e-21, 2, 0, 2, 6.56811e-15, -2, 0, -8.74228e-08, 25.3835, -0.0371488, 11.411 )
 
-[node name="Armario" parent="Paredes2/SubVest3/Armarios" instance=ExtResource( 8 )]
+[node name="Banco1" parent="Paredes2/SubVest3" instance=ExtResource( 10 )]
 
-transform/local = Transform( 1.09836, -7.10543e-15, -8.47033e-22, 7.10543e-15, 1.09836, 7.10543e-15, 0, -7.10543e-15, 1.09836, 0, 0, 0 )
-
-[node name="Armario1" parent="Paredes2/SubVest3/Armarios" instance=ExtResource( 8 )]
-
-transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 2.30626 )
-
-[node name="Armario2" parent="Paredes2/SubVest3/Armarios" instance=ExtResource( 8 )]
-
-transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 4.61181 )
-
-[node name="Armario3" parent="Paredes2/SubVest3/Armarios" instance=ExtResource( 8 )]
-
-transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 6.94573 )
-
-[node name="Armario4" parent="Paredes2/SubVest3/Armarios" instance=ExtResource( 8 )]
-
-transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 9.34164 )
-
-[node name="Armario5" parent="Paredes2/SubVest3/Armarios" instance=ExtResource( 8 )]
-
-transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 11.6628 )
-
-[node name="Armario6" parent="Paredes2/SubVest3/Armarios" instance=ExtResource( 8 )]
-
-transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 13.9802 )
-
-[node name="Banco" parent="Paredes2/SubVest3" instance=ExtResource( 9 )]
-
-transform/local = Transform( -8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 10.0229, -0.0371501, 11.411 )
-
-[node name="Banco1" parent="Paredes2/SubVest3" instance=ExtResource( 9 )]
-
-transform/local = Transform( -8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 10.0229, -0.0371501, 1.34065 )
+transform/local = Transform( -8.74228e-08, -1.3363e-21, 2, 0, 2, 6.56811e-15, -2, 0, -8.74228e-08, 25.3835, -0.0371488, 1.34065 )
 
 [node name="SubVest4" type="Spatial" parent="Paredes2"]
 
@@ -578,33 +607,33 @@ transform/local = Transform( -1, -8.74228e-08, 0, -8.74228e-08, 1, -8.74228e-08,
 
 editor/display_folded = true
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.2299, 0, 0 )
+transform/local = Transform( 1, -6.6815e-22, 0, -6.6815e-22, 1, 0, 0, 0, 1, 15.6489, -5.75332e-07, 0 )
 
-[node name="Armario" parent="Paredes2/SubVest4/Armarios1" instance=ExtResource( 8 )]
+[node name="Armario" parent="Paredes2/SubVest4/Armarios1" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.12539, -7.51933e-22, 0, -7.51932e-22, 1.12539, 0, 0, 0, 1.12539, 0, 0, 0 )
 
-[node name="Armario1" parent="Paredes2/SubVest4/Armarios1" instance=ExtResource( 8 )]
+[node name="Armario1" parent="Paredes2/SubVest4/Armarios1" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 2.30626 )
 
-[node name="Armario2" parent="Paredes2/SubVest4/Armarios1" instance=ExtResource( 8 )]
+[node name="Armario2" parent="Paredes2/SubVest4/Armarios1" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 4.61181 )
 
-[node name="Armario3" parent="Paredes2/SubVest4/Armarios1" instance=ExtResource( 8 )]
+[node name="Armario3" parent="Paredes2/SubVest4/Armarios1" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 6.94573 )
 
-[node name="Armario4" parent="Paredes2/SubVest4/Armarios1" instance=ExtResource( 8 )]
+[node name="Armario4" parent="Paredes2/SubVest4/Armarios1" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 9.34164 )
 
-[node name="Armario5" parent="Paredes2/SubVest4/Armarios1" instance=ExtResource( 8 )]
+[node name="Armario5" parent="Paredes2/SubVest4/Armarios1" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 11.6628 )
 
-[node name="Armario6" parent="Paredes2/SubVest4/Armarios1" instance=ExtResource( 8 )]
+[node name="Armario6" parent="Paredes2/SubVest4/Armarios1" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 13.9802 )
 
@@ -612,83 +641,159 @@ transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 
 
 editor/display_folded = true
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-transform/local = Transform( -1, -8.74228e-08, 0, -8.74228e-08, 1, -8.74228e-08, 7.64274e-15, -8.74228e-08, -1, 19.9743, 0, 13.2923 )
+transform/local = Transform( -1, -8.74228e-08, 0, -8.74228e-08, 1, -8.74228e-08, 7.64274e-15, -8.74228e-08, -1, 13.3933, -5.75334e-07, 13.2923 )
 
-[node name="Armario" parent="Paredes2/SubVest4/Armarios2" instance=ExtResource( 8 )]
+[node name="Armario" parent="Paredes2/SubVest4/Armarios2" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09973, 0, 0, 0, 1.09973, 0, 0, 0, 1.09973, 0, 0, 0 )
 
-[node name="Armario1" parent="Paredes2/SubVest4/Armarios2" instance=ExtResource( 8 )]
+[node name="Armario1" parent="Paredes2/SubVest4/Armarios2" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 2.30626 )
 
-[node name="Armario2" parent="Paredes2/SubVest4/Armarios2" instance=ExtResource( 8 )]
+[node name="Armario2" parent="Paredes2/SubVest4/Armarios2" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 4.61181 )
 
-[node name="Armario3" parent="Paredes2/SubVest4/Armarios2" instance=ExtResource( 8 )]
+[node name="Armario3" parent="Paredes2/SubVest4/Armarios2" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 6.94573 )
 
-[node name="Armario4" parent="Paredes2/SubVest4/Armarios2" instance=ExtResource( 8 )]
+[node name="Armario4" parent="Paredes2/SubVest4/Armarios2" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 9.34164 )
 
-[node name="Armario5" parent="Paredes2/SubVest4/Armarios2" instance=ExtResource( 8 )]
+[node name="Armario5" parent="Paredes2/SubVest4/Armarios2" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 11.6628 )
 
-[node name="Armario6" parent="Paredes2/SubVest4/Armarios2" instance=ExtResource( 8 )]
+[node name="Armario6" parent="Paredes2/SubVest4/Armarios2" instance=ExtResource( 9 )]
 
 transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 13.9802 )
 
-[node name="Banco" parent="Paredes2/SubVest4" instance=ExtResource( 9 )]
+[node name="Banco" parent="Paredes2/SubVest4" instance=ExtResource( 10 )]
 
-transform/local = Transform( -8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 10.0229, -0.0371501, 11.411 )
+transform/local = Transform( -8.74228e-08, -1.3363e-21, 2, 0, 2, 6.56811e-15, -2, 0, -8.74228e-08, 25.2101, -0.0371488, 11.411 )
 
-[node name="Banco1" parent="Paredes2/SubVest4" instance=ExtResource( 9 )]
+[node name="Banco1" parent="Paredes2/SubVest4" instance=ExtResource( 10 )]
 
-transform/local = Transform( -8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 10.0229, -0.0371501, 1.34065 )
+transform/local = Transform( -8.74228e-08, -1.3363e-21, 2, 0, 2, 6.56811e-15, -2, 0, -8.74228e-08, 25.2101, -0.0371488, 1.34065 )
 
-[node name="Armarios" type="Spatial" parent="Paredes2/SubVest4"]
+[node name="Aquecedor" parent="Paredes2/SubVest4" instance=ExtResource( 11 )]
+
+transform/local = Transform( -0.35, 3.0598e-08, 3.50779e-22, 8.77754e-16, 1.5299e-08, -0.35, -3.0598e-08, -0.35, -1.5299e-08, 29.793, 2.75158, 19.7912 )
+
+[node name="Porta" parent="Paredes2" instance=ExtResource( 12 )]
+
+transform/local = Transform( 4.37114e-08, 3.82137e-15, -1, 0, 1, 3.82137e-15, 1, 0, 4.37114e-08, 34.6932, 0, -41.0452 )
+
+[node name="Porta1" parent="Paredes2" instance=ExtResource( 12 )]
+
+transform/local = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 28.2462, 0, 40.0548 )
+
+[node name="Canos" type="Spatial" parent="."]
 
 editor/display_folded = true
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
-[node name="Armario" parent="Paredes2/SubVest4/Armarios" instance=ExtResource( 8 )]
+[node name="CanoVermelho" parent="Canos" instance=ExtResource( 13 )]
 
-transform/local = Transform( 1.08987, -7.28194e-22, 1.69407e-21, -7.28193e-22, 1.08987, 0, 0, 0, 1.08987, 0, 0, 0 )
+transform/local = Transform( 0.132563, 0, 0, 0, -5.79452e-09, -0.132563, 0, 0.132563, -5.79452e-09, -30.2283, 5.78137, -40.5493 )
 
-[node name="Armario1" parent="Paredes2/SubVest4/Armarios" instance=ExtResource( 8 )]
+[node name="CanoMedio" parent="Canos" instance=ExtResource( 14 )]
 
-transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 2.30626 )
+transform/local = Transform( 0.5, 0, 0, 0, -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, 23.3612, 6.37799, 29.1488 )
 
-[node name="Armario2" parent="Paredes2/SubVest4/Armarios" instance=ExtResource( 8 )]
+[node name="CanoLongo" parent="Canos" instance=ExtResource( 15 )]
 
-transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 4.61181 )
+transform/local = Transform( -2.18557e-08, -0.5, 0, 0.5, -2.18557e-08, 0, 0, 0, 0.5, 24.1296, 14.0562, 26.0687 )
 
-[node name="Armario3" parent="Paredes2/SubVest4/Armarios" instance=ExtResource( 8 )]
+[node name="CanoCurto" parent="Canos" instance=ExtResource( 16 )]
 
-transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 6.94573 )
+transform/local = Transform( -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, 0, 0, 0, 0.5, 101.903, 14.807, -25.2456 )
 
-[node name="Armario4" parent="Paredes2/SubVest4/Armarios" instance=ExtResource( 8 )]
+[node name="Chuveiros" type="Spatial" parent="."]
 
-transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 9.34164 )
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 94.5346, 0, -17.3808 )
 
-[node name="Armario5" parent="Paredes2/SubVest4/Armarios" instance=ExtResource( 8 )]
+[node name="Boxe4" parent="Chuveiros" instance=ExtResource( 2 )]
 
-transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 11.6628 )
+transform/local = Transform( -3.5, 4.26207e-07, 0, 5.28485e-07, 2.82264, 2.46763e-07, 4.62017e-14, 2.46763e-07, -2.82264, 3.59583, -1.95402e-06, -3.86074 )
 
-[node name="Armario6" parent="Paredes2/SubVest4/Armarios" instance=ExtResource( 8 )]
+[node name="Boxe5" parent="Chuveiros" instance=ExtResource( 2 )]
 
-transform/local = Transform( 1.09727, 0, 0, 0, 1.09727, 0, 0, 0, 1.09727, 0, 0, 13.9802 )
+transform/local = Transform( -3.5, 4.26207e-07, 0, 5.28485e-07, 2.82264, 2.46763e-07, 4.62017e-14, 2.46763e-07, -2.82264, 3.59583, -1.95402e-06, 1.91247 )
 
-[node name="Porta" parent="Paredes2" instance=ExtResource( 10 )]
+[node name="Boxe6" parent="Chuveiros" instance=ExtResource( 2 )]
 
-transform/local = Transform( 4.37114e-08, 3.82137e-15, -1, 0, 1, 3.82137e-15, 1, 0, 4.37114e-08, 34.6932, 0, -41.0452 )
+transform/local = Transform( -3.5, 4.26207e-07, 0, 5.28485e-07, 2.82264, 2.46763e-07, 4.62017e-14, 2.46763e-07, -2.82264, 3.59583, -1.95402e-06, 7.69163 )
 
-[node name="Porta1" parent="Paredes2" instance=ExtResource( 10 )]
+[node name="Chuveiro" parent="Chuveiros" instance=ExtResource( 17 )]
 
-transform/local = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 28.2462, 0, 40.0548 )
+transform/local = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 4.17035, 10.8104, 1.73187 )
+
+[node name="Chuveiro1" parent="Chuveiros" instance=ExtResource( 17 )]
+
+transform/local = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 4.17035, 10.8104, -3.83718 )
+
+[node name="Chuveiro2" parent="Chuveiros" instance=ExtResource( 17 )]
+
+transform/local = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 4.17035, 10.8104, 7.66129 )
+
+[node name="Ralo" parent="Chuveiros" instance=ExtResource( 18 )]
+
+transform/local = Transform( 0.508318, 0, 0, 0, 0.508318, 0, 0, 0, 0.508318, 5.62279, -0.00751364, -3.92867 )
+
+[node name="Ralo1" parent="Chuveiros" instance=ExtResource( 18 )]
+
+transform/local = Transform( 0.508318, 0, 0, 0, 0.508318, 0, 0, 0, 0.508318, 5.62279, -0.00751364, 1.93791 )
+
+[node name="Ralo2" parent="Chuveiros" instance=ExtResource( 18 )]
+
+transform/local = Transform( 0.508318, 0, 0, 0, 0.508318, 0, 0, 0, 0.508318, 5.62279, -0.00751364, 7.96277 )
+
+[node name="Chuveiros1" type="Spatial" parent="."]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 94.5346, 0, 11.9627 )
+
+[node name="Boxe4" parent="Chuveiros1" instance=ExtResource( 2 )]
+
+transform/local = Transform( -3.5, 4.26207e-07, 0, 5.28485e-07, 2.82264, 2.46763e-07, 4.62017e-14, 2.46763e-07, -2.82264, 3.59583, -1.95402e-06, -3.86074 )
+
+[node name="Boxe5" parent="Chuveiros1" instance=ExtResource( 2 )]
+
+transform/local = Transform( -3.5, 4.26207e-07, 0, 5.28485e-07, 2.82264, 2.46763e-07, 4.62017e-14, 2.46763e-07, -2.82264, 3.59583, -1.95402e-06, 1.91247 )
+
+[node name="Boxe6" parent="Chuveiros1" instance=ExtResource( 2 )]
+
+transform/local = Transform( -3.5, 4.26207e-07, 0, 5.28485e-07, 2.82264, 2.46763e-07, 4.62017e-14, 2.46763e-07, -2.82264, 3.59583, -1.95402e-06, 7.69163 )
+
+[node name="Chuveiro" parent="Chuveiros1" instance=ExtResource( 17 )]
+
+transform/local = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 4.17035, 10.8104, 1.73187 )
+
+[node name="Chuveiro1" parent="Chuveiros1" instance=ExtResource( 17 )]
+
+transform/local = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 4.17035, 10.8104, -3.83718 )
+
+[node name="Chuveiro2" parent="Chuveiros1" instance=ExtResource( 17 )]
+
+transform/local = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 4.17035, 10.8104, 7.66129 )
+
+[node name="Ralo" parent="Chuveiros1" instance=ExtResource( 18 )]
+
+transform/local = Transform( 0.508318, 0, 0, 0, 0.508318, 0, 0, 0, 0.508318, 5.62279, -0.00751364, -3.92867 )
+
+[node name="Ralo1" parent="Chuveiros1" instance=ExtResource( 18 )]
+
+transform/local = Transform( 0.508318, 0, 0, 0, 0.508318, 0, 0, 0, 0.508318, 5.62279, -0.00751364, 1.93791 )
+
+[node name="Ralo2" parent="Chuveiros1" instance=ExtResource( 18 )]
+
+transform/local = Transform( 0.508318, 0, 0, 0, 0.508318, 0, 0, 0, 0.508318, 5.62279, -0.00751364, 7.96277 )
 
 
