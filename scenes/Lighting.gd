@@ -18,5 +18,11 @@ func _process(delta):
 		print(get_node("Galinha_Spawner").spawn(children[i].get_translation(), int (rand_range(1, 10))))
 		
 		get_node("Galinha_Spawner").spawn(Vector3(0,0,0), int (rand_range(1, 10)))
+		pass
+		
+		get_node("objeto_spawn").spawn(Vector3(10,0,10), 1)
+		
 	set_process(false)
+	
+	
 	pass

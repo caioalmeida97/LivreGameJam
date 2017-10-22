@@ -303,6 +303,7 @@ custom_constants/margin_bottom = 40
 
 [node name="PopupPanel" type="PopupPanel" parent="Options_UI/MarginContainer"]
 
+visibility/visible = false
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -561,10 +562,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -2.0
-margin/top = 22.0
-margin/right = 198.0
-margin/bottom = 52.0
+margin/left = 0.0
+margin/top = 24.0
+margin/right = 200.0
+margin/bottom = 54.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Options_UI/MarginContainer/HBoxContainer/CenterContainer/VBoxContainer/VBoxContainer"]
 
