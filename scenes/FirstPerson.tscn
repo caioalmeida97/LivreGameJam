@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=1]
+[gd_scene load_steps=6 format=1]
 
 [ext_resource path="res://script/FirstPerson.gd" type="Script" id=1]
 [ext_resource path="res://script/JumpPlayer.gd" type="Script" id=2]
 [ext_resource path="res://scenes/CombatUI.tscn" type="PackedScene" id=3]
+[ext_resource path="res://music/megasong.ogg" type="AudioStream" id=4]
 
 [sub_resource type="CapsuleShape" id=1]
 
@@ -66,5 +67,16 @@ visible_layers = 1048575
 environment = null
 h_offset = 0.0
 v_offset = 0.0
+
+[node name="StreamPlayer" type="StreamPlayer" parent="."]
+
+stream/stream = ExtResource( 4 )
+stream/play = false
+stream/loop = true
+stream/volume_db = 0.0
+stream/autoplay = true
+stream/paused = false
+stream/loop_restart_time = 0.0
+stream/buffering_ms = 500
 
 
