@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=7 format=1]
 
 [ext_resource path="res://script/FirstPerson.gd" type="Script" id=1]
 [ext_resource path="res://script/JumpPlayer.gd" type="Script" id=2]
@@ -9,6 +9,11 @@
 
 radius = 1.0
 height = 1.0
+
+[sub_resource type="CapsuleShape" id=2]
+
+radius = 1.47082
+height = 7.08874
 
 [node name="FirstPerson" type="RigidBody"]
 
@@ -48,6 +53,36 @@ shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
 script/script = ExtResource( 2 )
+
+[node name="Area" type="Area" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Transform( 1, 0, 0, 0, -0.004444, 0.99999, 0, -0.99999, -0.004444, 0, 0, 0 )
+shapes/0/trigger = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, -0.004444, 0.99999, 0, -0.99999, -0.004444, 0, 0, 0 )
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
 
 [node name="Spatial" parent="." instance=ExtResource( 3 )]
 

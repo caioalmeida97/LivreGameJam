@@ -93,19 +93,58 @@ transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.111258, 0.279523, 0.0
 
 [node name="Galinha_Spawner" parent="." instance=ExtResource( 4 )]
 
-[node name="spawn" type="Position3D" parent="."]
+[node name="spawn_reference" type="Spatial" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="spawn1" type="Position3D" parent="spawn_reference"]
 
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.95028, 2.1918, 21.8236 )
 
-[node name="spawn1" type="Position3D" parent="."]
+[node name="spawn2" type="Position3D" parent="spawn_reference"]
 
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 54.9453, -4.02719, -21.2531 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31.9929, 1.13394, 30.7217 )
 
-[node name="spawn2" type="Position3D" parent="."]
+[node name="spawn3" type="Position3D" parent="spawn_reference"]
 
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
-transform/local = Transform( 1, 0, 0, 0, 0.177786, -0.984069, 0, 0.984069, 0.177786, 27.2683, 1.32884, 33.2555 )
+transform/local = Transform( 1, 0, 0, 0, 0.177786, -0.984069, 0, 0.984069, 0.177786, 70.6889, 1.32884, 35.8976 )
+
+[node name="spawn4" type="Position3D" parent="spawn_reference"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31.9956, 0, -17.2993 )
+
+[node name="spawn5" type="Position3D" parent="spawn_reference"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.0741, 0, -34.2271 )
+
+[node name="spawn6" type="Position3D" parent="spawn_reference"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 45.3179, 0, 14.2238 )
+
+[node name="spawn7" type="Position3D" parent="spawn_reference"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 45.0373, 0, -17.2993 )
+
+[node name="spawn8" type="Position3D" parent="spawn_reference"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 93.6311, 0, -17.2993 )
+
+[node name="spawn9" type="Position3D" parent="spawn_reference"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 106.765, 0, -17.2993 )
+
+[node name="spawn10" type="Position3D" parent="spawn_reference"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 111.199, 0, 16.4222 )
 
 

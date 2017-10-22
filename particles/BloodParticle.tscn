@@ -41,7 +41,7 @@ textures/shade_param_tc = 0
 
 resource/name = "BloodAnim"
 length = 1.0
-loop = false
+loop = true
 step = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:emitting")
@@ -54,7 +54,7 @@ tracks/0/keys = {
 "values": [ false, true, false ]
 }
 tracks/1/type = "method"
-tracks/1/path = NodePath("../../..")
+tracks/1/path = NodePath("../..")
 tracks/1/interp = 1
 tracks/1/imported = false
 tracks/1/keys = {
@@ -66,24 +66,14 @@ tracks/1/keys = {
 } ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("../..:transform/rotation")
+tracks/2/path = NodePath("../../Modelo:transform/rotation")
 tracks/2/interp = 1
 tracks/2/imported = false
 tracks/2/keys = {
-"times": FloatArray( 0, 0.4, 0.7, 1 ),
-"transitions": FloatArray( 1, 1, 1, 1 ),
+"times": FloatArray( 0, 0.2, 1 ),
+"transitions": FloatArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 0, 60.8441 ), Vector3( 0, 0, 80.8345 ), Vector3( 0, 0, 92.088 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("../..:transform/translation")
-tracks/3/interp = 1
-tracks/3/imported = false
-tracks/3/keys = {
-"times": FloatArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
-"transitions": FloatArray( 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector3( 0, 0.345555, 0 ), Vector3( -1.08495, 1.23876, 0 ), Vector3( -1.42543, 0.11281, 0 ), Vector3( -2.17957, 0.485699, 0 ), Vector3( -2.81514, 0.0829923, 0 ), Vector3( -2.81514, 0.082992, 0 ) ]
+"values": [ Vector3( 0, 0, 0 ), Vector3( -2.07997, -1.89152, 84.5657 ), Vector3( -2.07997, -1.89152, 84.5657 ) ]
 }
 
 [node name="Particles" type="Spatial"]
