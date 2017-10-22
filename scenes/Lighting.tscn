@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=7 format=1]
 
 [ext_resource path="res://scenes/Lighting.gd" type="Script" id=1]
 [ext_resource path="res://scenes/FirstPerson.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Cenario.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/Galinha_Spawner.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/objeto_spawn.tscn" type="PackedScene" id=5]
 
 [sub_resource type="Environment" id=1]
 
@@ -95,6 +96,7 @@ transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.111258, 0.279523, 0.0
 
 [node name="spawn_reference" type="Spatial" parent="."]
 
+editor/display_folded = true
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="spawn1" type="Position3D" parent="spawn_reference"]
@@ -146,5 +148,7 @@ transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 106.765, 0, -17.2993 )
 
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 111.199, 0, 16.4222 )
+
+[node name="objeto_spawn" parent="." instance=ExtResource( 5 )]
 
 
