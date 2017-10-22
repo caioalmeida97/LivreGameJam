@@ -1,0 +1,125 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://script/granade.gd" type="Script" id=1]
+[ext_resource path="res://meshes/sabonete.tres" type="Mesh" id=2]
+
+[sub_resource type="ConvexPolygonShape" id=1]
+
+points = Vector3Array( 1.40941, 0.0101996, -0.617122, -1.40941, 0.453494, -0.617122, 1.40941, 0.453494, -0.617122, -1.38009, 0.596104, -0.539241, -1.18501, 0.596104, 0.622693, -1.18501, 0.596104, -0.450872, 1.40941, -0.13241, 0.646334, -1.40941, -0.13241, -0.474513, 1.40941, -0.13241, -0.474512, -1.55202, 0.0101996, 0.646333, -1.55202, 0.453494, -0.474512, -1.55202, 0.0101996, -0.474513, 1.38009, 0.596104, 0.711063, 1.18501, 0.596104, -0.450872, 1.185, 0.596104, 0.622694, 1.40941, 0.453494, 0.788944, -1.40941, 0.0101996, 0.788943, 1.40941, 0.0101996, 0.788944, -1.18501, 0.543042, -0.450872, 1.38009, 0.596104, -0.53924, -1.38009, 0.596104, 0.711062, -1.18501, 0.543042, 0.622693, 1.10456, 0.543042, 0.586256, -1.10457, 0.543042, 0.586255, 1.18501, 0.543042, -0.450872, 1.185, 0.543042, 0.622694, 1.55202, 0.0101996, -0.474512, 1.55202, 0.0101996, 0.646334, -1.40941, -0.13241, 0.646334, -1.40941, 0.0101996, -0.617122, 1.55202, 0.453494, -0.474512, 1.55202, 0.453494, 0.646335, -1.55202, 0.453494, 0.646333, -1.40941, 0.453494, 0.788943, -1.10457, 0.543042, -0.414434, 1.10457, 0.543042, -0.414434 )
+
+[sub_resource type="SphereShape" id=2]
+
+radius = 8.93127
+
+[node name="shoot teste" type="Spatial"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000244141, 0, 0 )
+
+[node name="Camera" type="Camera" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 0.0430343, 0.102027, -0.99385, -0.0129536, 0.994745, 0.101558, 0.99899, 0.00850349, 0.0441298, -36.2488, 11.9446, 13.9561 )
+projection = 0
+fov = 90.0
+near = 0.1
+far = 100.0
+keep_aspect = 1
+current = false
+visible_layers = 1048575
+environment = null
+h_offset = 0.0
+v_offset = 0.0
+
+[node name="DirectionalLight" type="DirectionalLight" parent="Camera"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, -2.88214e-08, 8.9407e-08, 1.18331e-07, 1, 5.45643e-08, -8.9407e-08, 1.05123e-07, 1, 4.11651, 2.22409, 11.5668 )
+layers = 1
+params/enabled = true
+params/editor_only = false
+params/bake_mode = 0
+params/energy = 1.0
+colors/diffuse = Color( 1, 1, 1, 1 )
+colors/specular = Color( 1, 1, 1, 1 )
+shadow/shadow = false
+shadow/darkening = 0.0
+shadow/z_offset = 0.05
+shadow/z_slope_scale = 0.0
+shadow/esm_multiplier = 60.0
+shadow/blur_passes = 1.0
+projector = null
+operator = 0
+shadow/mode = 0
+shadow/max_distance = 0.0
+shadow/split_weight = 0.5
+shadow/zoffset_scale = 2.0
+
+[node name="sabao" type="Spatial" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.102394, 3.38621, 0.00431108 )
+script/script = ExtResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="sabao"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 0.999668, -0.0257667, 0, 0.0257314, 0.998298, -0.052336, 0.00134853, 0.0523186, 0.99863, 3.95053, -4.45182, -1.81139 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 2 )
+mesh/skeleton = NodePath("..")
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="sabao/MeshInstance"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, -5.80621e-09, 1.39698e-09, 4.4507e-08, 1, 0, 3.49246e-10, 1.49012e-08, 1, -0.0489349, 0.0175996, 0.00500774 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="Area" type="Area" parent="sabao"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -3.88608, -8.23648, 22.3387 )
+input/ray_pickable = false
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 76.1136, 41.8775, -238.7 )
+shapes/0/trigger = false
+space_override = 0
+gravity_point = false
+gravity_distance_scale = 0.0
+gravity_vec = Vector3( 0, -1, 0 )
+gravity = 9.8
+linear_damp = 0.1
+angular_damp = 1.0
+priority = 0.0
+monitoring = true
+monitorable = true
+collision/layers = 1
+collision/mask = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="sabao/Area"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 76.1136, 41.8775, -238.7 )
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
+
+
