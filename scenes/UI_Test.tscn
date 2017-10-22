@@ -301,6 +301,168 @@ custom_constants/margin_top = 40
 custom_constants/margin_left = 80
 custom_constants/margin_bottom = 40
 
+<<<<<<< HEAD
+=======
+[node name="PopupPanel" type="PopupPanel" parent="Options_UI/MarginContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 80.0
+margin/top = 40.0
+margin/right = 944.0
+margin/bottom = 560.0
+popup/exclusive = false
+
+[node name="MarginContainer" type="MarginContainer" parent="Options_UI/MarginContainer/PopupPanel"]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 0.0
+custom_constants/margin_right = 50
+custom_constants/margin_top = 30
+custom_constants/margin_left = 50
+custom_constants/margin_bottom = 30
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Options_UI/MarginContainer/PopupPanel/MarginContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 50.0
+margin/top = 30.0
+margin/right = 814.0
+margin/bottom = 490.0
+alignment = 0
+
+[node name="RichTextLabel1" type="RichTextLabel" parent="Options_UI/MarginContainer/PopupPanel/MarginContainer/HBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 3
+size_flags/stretch_ratio = 2.0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 166.0
+margin/bottom = 460.0
+custom_constants/line_separation = 10
+bbcode/enabled = false
+bbcode/bbcode = "Créditos
+																		
+MÚSICA
+pauliuw			
+Emma_MA		
+												
+EFEITOS SONOROS
+remaxim
+esperar	
+SlykMrByches	
+artisticdude
+
+Livre Game Jam  -  Campinas 2017
+"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Options_UI/MarginContainer/PopupPanel/MarginContainer/HBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 170.0
+margin/top = 0.0
+margin/right = 253.0
+margin/bottom = 460.0
+alignment = 0
+
+[node name="Button" type="Button" parent="Options_UI/MarginContainer/PopupPanel/MarginContainer/HBoxContainer/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 0
+size_flags/vertical = 2
+margin/left = 20.0
+margin/top = 400.0
+margin/right = 62.0
+margin/bottom = 420.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Back"
+flat = false
+
+[node name="Right Space1" type="Control" parent="Options_UI/MarginContainer/PopupPanel/MarginContainer/HBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 257.0
+margin/top = 0.0
+margin/right = 340.0
+margin/bottom = 460.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Options_UI/MarginContainer/PopupPanel/MarginContainer/HBoxContainer"]
+
+rect/min_size = Vector2( 100, 100 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 3
+size_flags/stretch_ratio = 4.0
+margin/left = 344.0
+margin/top = 0.0
+margin/right = 676.0
+margin/bottom = 460.0
+custom_constants/line_separation = 10
+bbcode/enabled = false
+bbcode/bbcode = "CHICKEN VIRAL: THE GAME
+
+Desenvolvido por Nome do Time		
+									
+DESIGN E MODELAGEM 
+Rodrigo Disseli			
+Daniel Quevedo		
+												
+PROGRAMAÇÃO
+André Dobberman	
+Daniel Quevedo		
+Caio Almeida				
+Michael Vivaldini	
+Tácio Barreto
+Vinícius Rojas
+							
+MÚSICA TEMA
+Felipe Strozi
+
+Livre Game Jam  -  Campinas 2017
+"
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="Right Space2" type="Control" parent="Options_UI/MarginContainer/PopupPanel/MarginContainer/HBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 680.0
+margin/top = 0.0
+margin/right = 764.0
+margin/bottom = 460.0
+
+>>>>>>> 23b4cdebcda751f8ec4861cbdc43556ad0154d63
 [node name="HBoxContainer" type="HBoxContainer" parent="Options_UI/MarginContainer"]
 
 focus/ignore_mouse = false
@@ -378,6 +540,37 @@ margin/right = 200.0
 margin/bottom = 373.0
 alignment = 0
 
+<<<<<<< HEAD
+=======
+[node name="Options" type="Button" parent="Options_UI/MarginContainer/HBoxContainer/CenterContainer/VBoxContainer/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 200.0
+margin/bottom = 20.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Options"
+flat = false
+
+[node name="Space 2" type="Control" parent="Options_UI/MarginContainer/HBoxContainer/CenterContainer/VBoxContainer/VBoxContainer"]
+
+rect/min_size = Vector2( 0, 30 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -2.0
+margin/top = 22.0
+margin/right = 198.0
+margin/bottom = 52.0
+
+>>>>>>> 23b4cdebcda751f8ec4861cbdc43556ad0154d63
 [node name="HBoxContainer" type="HBoxContainer" parent="Options_UI/MarginContainer/HBoxContainer/CenterContainer/VBoxContainer/VBoxContainer"]
 
 focus/ignore_mouse = false

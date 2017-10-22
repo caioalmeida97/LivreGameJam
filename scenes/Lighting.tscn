@@ -96,6 +96,7 @@ transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.111258, 0.279523, 0.0
 
 [node name="spawn_reference" type="Spatial" parent="."]
 
+editor/display_folded = true
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="spawn1" type="Position3D" parent="spawn_reference"]

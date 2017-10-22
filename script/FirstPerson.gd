@@ -11,7 +11,6 @@ var vivo
 func _ready():
 	#Hide and capture mouse
 	vivo = true
-	add_to_group("player")
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	set_fixed_process(true)
@@ -23,14 +22,6 @@ func on_area(area):
 	if area.get_parent().is_in_group("galinhas"):
 		dar_dano(1);
 		pass
-		
-	if area.get_parent().is_in_group("objetos"):
-		if area.get_parent().is_in_group("desentupidor"):
-			get_node("Spatial").toco = true
-			get_node("Spatial").desentupidor = true
-			get_node("Spatial").cont_desentupidor = 0
-		pass
-		
 	if vida <= 0 :
 		print("morreu")
 		vivo = false
@@ -39,7 +30,7 @@ func on_area(area):
 	pass
 	
 func dar_dano(valor):
-	vida -= valor
+	vida =- valor
 	pass
 
 func _fixed_process(delta):
