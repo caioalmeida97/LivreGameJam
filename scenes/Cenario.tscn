@@ -714,7 +714,6 @@ transform/local = Transform( -2.18557e-08, 0.5, 0, -0.5, -2.18557e-08, 0, 0, 0, 
 
 [node name="Chuveiros" type="Spatial" parent="."]
 
-editor/display_folded = true
 _import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 94.5346, 0, -17.3808 )
 
@@ -744,11 +743,11 @@ transform/local = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 4.17035, 10.810
 
 [node name="Ralo" parent="Chuveiros" instance=ExtResource( 18 )]
 
-transform/local = Transform( 0.508318, 0, 0, 0, 0.508318, 0, 0, 0, 0.508318, 5.62279, -0.00751364, -3.92867 )
+transform/local = Transform( 0.505364, 0.0115278, 0.0534906, -0.0132731, 0.507895, 0.0159439, -0.0530844, -0.017248, 0.505244, 5.62279, -0.00751364, -3.92867 )
 
 [node name="Ralo1" parent="Chuveiros" instance=ExtResource( 18 )]
 
-transform/local = Transform( 0.508318, 0, 0, 0, 0.508318, 0, 0, 0, 0.508318, 5.62279, -0.00751364, 1.93791 )
+transform/local = Transform( 0.508318, 0, 0, 0, 0.508318, 0, 0, 0, 0.508318, 5.51675, -0.00751173, 1.82596 )
 
 [node name="Ralo2" parent="Chuveiros" instance=ExtResource( 18 )]
 

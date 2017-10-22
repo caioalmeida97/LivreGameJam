@@ -25,13 +25,14 @@ func on_area_enter(area):
 		direcao.x *= -1
 		direcao.z *= -1
 	#elif area.is_in_group("personagem"):
-	elif area.get_parent().is_in_group("objetos"):
-		
+	elif area.get_parent().is_in_group("objetos"): 
+		direcao.z = 0
+		direcao.x = 0
+		vel = 0
 		get_node("SamplePlayer").chickenDies()
-		get_node("SamplePlayer").splatChickenBlood()
+		get_node("SamplePlayer").splatChickenBloo()
 		get_node("Particles/AnimationPlayer").play("BloodAnim")
-		
-		
+	
 	pass
 	
 func follow(var fps):
